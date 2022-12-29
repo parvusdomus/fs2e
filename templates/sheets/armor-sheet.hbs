@@ -1,0 +1,28 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <div class="img-wrapper">
+      <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64" />
+    </div>
+    <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
+  </header>
+  <div class="sheet-content">
+    <div class="item-stats">
+      <div class="item-stat">
+        <label>{{localize "fs2e.armor.thunk"}}</label>
+        <input name="system.thunk" type="text" value="{{item.system.thunk}}" data-dtype="Number" />
+      </div>
+      <div class="item-stat">
+        <label>{{localize "fs2e.armor.popBack"}}</label>
+        <input name="system.popBack" type="text" value="{{item.system.popBack}}" data-dtype="Number" />
+      </div>
+      <div class="item-stat">
+        <label>{{localize "fs2e.armor.penalty"}}</label>
+        <input name="system.penalty" type="text" value="{{item.system.penalty}}" data-dtype="Number" />
+      </div>
+    </div>
+    <div class="panelBorder sheet-card description">
+      <h2>{{localize "fs2e.sheet.description"}}</h2>
+      {{editor item.system.description target="system.description" button=true owner=owner editable=true}}
+    </div>
+  </div>
+</form>

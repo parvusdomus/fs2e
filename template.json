@@ -1,0 +1,172 @@
+{
+  "Actor": {
+    "types": [
+      "hero",
+      "mook",
+      "featuredFoe",
+      "boss",
+      "vehicle"
+    ],
+    "templates": {
+      "commonStats": {
+        "attackPrimary": {
+          "name": "guns",
+          "value": 7
+        },
+        "defense": 7,
+        "speed": 7,
+        "concept": "",
+        "bonuses": {
+          "checks": {
+            "up": 0,
+            "reload": 0,
+            "death": 0
+          },
+          "dodge": 0,
+          "attack": 0,
+          "initiative": 0
+        }
+      },
+      "namedCharacter": {
+        "attackBackup": {
+          "name": "martialArts",
+          "value": 7
+        },
+        "toughness": 7
+      },
+      "woundable": {
+        "wounds": {
+          "value": 0,
+          "max": 60
+        },
+        "impairment": {
+          "threshold": 25,
+          "extra": 0
+        }
+      }
+    },
+    "mook": {
+      "templates": [
+        "commonStats"
+      ],
+      "attackPrimary": {
+        "value": 8
+      },
+      "defense": 13,
+      "speed": 5
+    },
+    "featuredFoe": {
+      "templates": [
+        "commonStats",
+        "woundable",
+        "namedCharacter"
+      ],
+      "wounds": {
+        "max": 35
+      }
+    },
+    "boss": {
+      "templates": [
+        "commonStats",
+        "woundable",
+        "namedCharacter"
+      ],
+      "wounds": {
+        "max": 50
+      },
+      "impairment": {
+        "threshold": 40
+      }
+    },
+    "hero": {
+      "templates": [
+        "commonStats",
+        "woundable",
+        "namedCharacter"
+      ],
+      "fortune": {
+        "name": "fortune",
+        "value": 7,
+        "max": 7
+      },
+      "deathMarks": 0,
+      "archetype": "Archetype",
+      "hook": "",
+      "wealth": "poor"
+    },
+    "vehicle": {
+      "templates": [
+        "woundable"
+      ],
+      "acceleration": 6,
+      "handling": 6,
+      "frame": 6,
+      "condition": 0,
+      "isPersonalVehicle": false,
+      "isMilitaryVehicle": false,
+      "driver": "",
+      "passengers": [],
+      "wounds": {
+        "max": 35
+      }
+    }
+  },
+  "Item": {
+    "types": [
+      "weapon",
+      "vehicle",
+      "armor",
+      "skill",
+      "shtick"
+    ],
+    "templates": {
+      "itemDescription": {
+        "description": ""
+      }
+    },
+    "weapon": {
+      "templates": [
+        "itemDescription"
+      ],
+      "attackWith": "guns",
+      "damage": 0,
+      "concealment": 0,
+      "reload": 0,
+      "mookBonus": 0,
+      "pumpAction": false,
+      "heavy": false
+    },
+    "vehicle": {
+      "templates": [
+        "itemDescription"
+      ],
+      "acceleration": 0,
+      "frame": 0,
+      "handling": 0,
+      "personal": false
+    },
+    "armor": {
+      "templates": [
+        "itemDescription"
+      ],
+      "thunk": 0,
+      "popBack": 0,
+      "penalty": -1
+    },
+    "skill": {
+      "templates": [
+        "itemDescription"
+      ],
+      "value": 7
+    },
+    "shtick": {
+      "templates": [
+        "itemDescription"
+      ],
+      "type": "core",
+      "fortuneCost": 0,
+      "shotCost": 0,
+      "active": false
+    }
+  }
+}

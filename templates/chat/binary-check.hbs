@@ -1,0 +1,19 @@
+<div class="dice-roll fs2e binary-check">
+  <h2 class="title">
+    <div class="check-type">{{localize "fs2e.chat.taskCheck.title" type=taskType}}</div>
+  </h2>
+  <div class="roll-summary">
+    <div class="dice-formula">{{roll.formula}}</div>
+    {{{tooltip}}}
+    <h4 class="dice-total action-result" data-action-result="{{roll.total}}">
+      {{localize "fs2e.chat.taskCheck.actionResult" result=roll.total}}
+    </h4>
+    <h4 class="dice-total outcome">
+      {{#if success}}
+      {{localize "fs2e.checkSuccess"}}
+      {{else}}
+      {{localize "fs2e.checkFailure"}}
+      {{/if}}
+    </h4>
+  </div>
+</div>

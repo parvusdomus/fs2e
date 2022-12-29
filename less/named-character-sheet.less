@@ -1,0 +1,146 @@
+.fs2e.sheet {
+  .hidden {
+    display: none;
+  }
+
+  .panelBorder {
+
+    &:first-child {
+      margin-top: 0em;
+    }
+    h2 {
+      margin-top: 10px;
+    }
+
+    h2, h3, th, td, textarea, p {
+      padding: 0 0.75em @baronBottomPadding;
+    }
+  }
+
+  .sidebar {
+    gap: 0.5em;
+  }
+
+  .archetype {
+    margin-bottom: 0;
+  }
+
+  .impairment-values {
+    display: flex;
+    flex-flow: row;
+    gap: 0.25em;
+
+    padding: 0 8px 4px;
+    
+    .impairment-total {
+      flex-grow: 1;
+    }
+  }
+}
+
+.fs2e.sheet.namedCharacter {
+  
+  textarea {
+    resize: none;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: auto 250px;
+    grid-template-rows: auto minmax(min-content, max-content);
+    row-gap: 0.5em;
+  }
+
+  .sheet-body, .left-side, .right-side {
+    gap: @defaultGap;
+  }
+
+  .sidebar {
+    grid-column-start: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    .actor-img, .wealth, .impairment {
+      width: @sidebar-bg-width;
+    }
+    .archetype {
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    
+    .stat-block {
+      margin-bottom: 0.75rem;
+    }
+    .stats-and-weapons {
+      padding: 0.5em;
+      height: 100%;
+    }
+
+    .wealth > select {
+      padding: 0 0.75em @baronBottomPadding;
+    }
+    .weapon-list {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  .actor-name {
+    padding: 0 0.75rem 0;
+    margin-bottom: 0.5em;
+    height: 1.2em;
+  }
+
+  .sheet-body {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .shticks-gear-skills-death {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+
+    .left-side, .right-side {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .gear {
+      height: 100%;
+    }
+    .skills {
+      height: 100%;
+    }
+  }
+
+  .wound-points {
+    grid-row-start: 2;
+    grid-column-end: span 2;
+  }
+
+  .actor-img > img {
+    width: 256px;  
+  }
+
+  input {
+    width: 100%;
+  }
+  select {
+    border: none;
+    text-align: center;
+  }
+  .wealth, .impairment {
+    text-align: center;
+    text-align-last: center;
+    width: 100%;
+  }
+}

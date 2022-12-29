@@ -1,0 +1,39 @@
+{
+  "name":"fs2e",
+  "title": "Feng Shui 2: The action movie roleplaying game",
+  "description": "A system for playing Feng Shui 2 games.",
+  "author": "Mougli",
+  "version": 0.23,
+  "minimumCoreVersion": "9.255",
+  "compatibleCoreVersion": "9.269",
+  "esmodules": [
+    "fs2e.js"
+  ],
+  "styles":[
+    "fs2e.css"
+  ],
+  "packs": [
+
+  ],
+  "languages":[
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "socketlib",
+      "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-socketlib/master/module.json"
+    }
+  ],
+  "socket": true,
+  "gridDistance": 5,
+  "gridUnits": "ft",
+  "primaryTokenAttribute": "wounds",
+  "initiative": "1d6 + @speed",
+  "url": "https://gitlab.com/mougli/fs2e",
+  "manifest": "https://gitlab.com/api/v4/projects/mougli%2Ffs2e/packages/generic/fs2e/latest/system.json",
+  "download": "https://gitlab.com/mougli/fs2e/-/releases/release-0.23/downloads/fs2e-release-0.23.zip"
+}

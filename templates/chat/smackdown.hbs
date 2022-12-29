@@ -1,0 +1,15 @@
+<div class="fs2e chat-card" data-actor-id="{{actorId}}">
+  {{#if downed}}
+  <p>{{localize "fs2e.chat.attack.summary.downedCharacter" name=actorName damage=damage}}</p>
+  {{else}}
+  <p>{{localize "fs2e.chat.attack.summary.damaged" name=actorName damage=damage}}</p>
+  <button class="damage-button" data-actor-id="{{actorId}}" data-actor-name="{{actorName}}" data-damage="{{damage}}">
+    {{localize "fs2e.chat.actions.applyDamage"}}
+  </button>
+  {{#if requireUpCheck}}
+  <button class="upcheck-button" data-actor-id="{{actorId}}" data-actor-name="{{actorName}}">
+    {{localize "fs2e.chat.actions.upcheck"}}
+  </button>
+  {{/if}}
+  {{/if}}
+</div>

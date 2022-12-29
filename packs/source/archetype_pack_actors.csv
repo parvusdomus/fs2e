@@ -1,0 +1,13 @@
+Name,Archetype,PrimaryAttackName,PrimaryAttackValue,SecondaryAttackName,SecondaryAttackValue,Defense,Toughness,FortuneName,FortuneValue,Speed,Impairment,wealth
+Big Bruiser,Big Bruiser,martialArts,12,guns,11,12,12,fortune,6,5,40,stiff
+Everyday Hero,Everyday Hero,martialArts,15,guns,11,15,6,fortune,9,6,25,stiff
+Full Metal Nutball,Full Metal Nutball,guns,13,martialArts,11,13,6,fortune,7,8,25,poor
+Gene Freak,Gene Freak,mutant,13,,,13,6,genome,9,6,25,rich
+Karate Cop,Karate Cop,martialArts,13,guns,12,14,7,fortune,7,7,25,stiff
+Killer,Killer,guns,15,martialArts,12,14,6,fortune,6,9,25,rich
+Magic Cop,Magic Cop,guns,14,sorcery,13,13,7,magic,8,6,25,stiff
+Martial Artist,Martial Artist,martialArts,15,,,15,8,chi,8,7,25,poor
+Maverick Cop,Maverick Cop,guns,13,martialArts,12,13,8,fortune,6,7,25,stiff
+Private Investigator,Private Investigator,guns,13,martialArts,12,13,7,fortune,6,7,25,stiff
+Scrappy Kid,Scrappy Kid,martialArts,13,,,15,4,chi,9,9,25,poor
+Sorcerer,Sorcerer,sorcery,14,,,13,6,magic,8,7,25,rich

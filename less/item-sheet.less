@@ -1,0 +1,96 @@
+.fs2e.sheet.item {
+
+  min-width: min-content;
+  min-height: max-content;
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  .sheet-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+
+    .tox-tinymce {
+      height: 100% !important;
+    }
+  }
+  .sheet-header {
+    margin-bottom: 0.5em;
+  }
+
+  .description {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .editor {
+      flex: 1;
+    }
+  }
+
+  .item-stats {
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+
+    padding: 0.25em;
+    gap: 0.1em;
+
+    .item-stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5em;
+
+      select, input {
+        font-size: 1.25em;
+      }
+
+      label {
+        flex-grow: 1;
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+  }
+
+  .effects-list {
+
+    ol {
+      padding-left: 0;
+      margin-bottom: 10px;
+    }
+
+    li {
+      padding-left: 8px;
+    }
+
+    .effect {
+      display: flex;
+      flex-direction: row;
+      align-content: stretch;
+    }
+
+    .effect-name {
+      flex: 1;
+    }
+
+    .effect-controls {
+      flex: 0 0 48px;
+    }
+  }
+
+  .img-wrapper {
+    .clippedBorder(); 
+    flex: 0 0 70px;
+    padding: 0.1em;
+
+    margin-left: 1em;
+
+    img {
+      border: none;
+    }
+  }
+}

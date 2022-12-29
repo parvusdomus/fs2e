@@ -1,0 +1,82 @@
+<section class="stat-block">
+  <label class="stat-name">
+    <select name="system.attackPrimary.name">
+      {{#select actor.system.attackPrimary.name}}
+      {{#each config.attackTypes as |name type|}}
+      <option value="{{type}}">{{localize name}}</option>
+      {{/each}}
+      {{/select}}
+    </select>
+  </label>
+  <div class="stat-value reveal-rollable">
+    <input name="system.attackPrimary.value" type="text" value="{{actor.system.attackPrimary.value}}" data-dtype="Number" />
+    <a class="task-check rollable hidden" data-action-value="{{actor.system.attackPrimary.value}}"
+      data-check-type="{{localize (lookup config.taskCheckTypes system.attackPrimary.name)}}"><i
+        class="fas fa-dice"></i></a>
+  </div>
+  {{#if (ne actor.type "mook")}}
+  <label class="stat-name">
+    <select name="system.attackBackup.name">
+      {{#select actor.system.attackBackup.name}}
+      {{#each config.attackTypes as |name type|}}
+      {{#if name}}
+      <option value="{{type}}">{{localize name}}</option>
+      {{else}}
+      <option value="">{{localize "fs2e.stats.backupAttack"}}</option>
+      {{/if}}
+      {{/each}}
+      {{/select}}
+    </select>
+  </label>
+  <div class="stat-value reveal-rollable">
+    <input name="system.attackBackup.value" type="text" value="{{actor.system.attackBackup.value}}" data-dtype="Number" />
+    <a class="task-check rollable hidden" data-action-value="{{actor.system.attackBackup.value}}"
+      data-check-type="{{localize (lookup config.taskCheckTypes actor.system.attackBackup.name)}}"><i
+        class="fas fa-dice"></i></a>
+  </div>
+  {{/if}}
+  <label class="stat-name">
+    {{localize "fs2e.stats.defense"}}
+  </label>
+  <div class="stat-value reveal-rollable">
+    <input name="system.defense" type="text" value="{{actor.system.defense}}" data-dtype="Number" />
+    <a class="task-check rollable hidden" data-action-value="{{actor.system.defense}}"
+      data-check-type="{{localize (lookup config.taskCheckTypes "defense")}}"><i class="fas fa-dice"></i></a>
+  </div>
+  {{#if (ne actor.type "mook")}}
+  <label class="stat-name">
+    {{localize "fs2e.stats.toughness"}}
+  </label>
+  <div class="stat-value reveal-rollable">
+    <input name="system.toughness" type="text" value="{{actor.system.toughness}}" data-dtype="Number" />
+    <a class="task-check rollable hidden" data-action-value="{{actor.system.toughness}}"
+      data-check-type="{{localize (lookup config.taskCheckTypes "toughness")}}"><i class="fas fa-dice"></i></a>
+  </div>
+  {{/if}}
+  {{#if (eq actor.type "hero")}}
+  <label class="stat-name">
+    <select name="system.fortune.name">
+      {{#select actor.system.fortune.name}}
+      {{#each config.fortuneTypes as |name type|}}
+      <option value="{{type}}">{{localize name}}</option>
+      {{/each}}
+      {{/select}}
+    </select>
+  </label>
+  <div class="stat-value reveal-rollable">
+    <input name="system.fortune.value" type="text" value="{{actor.system.fortune.value}}" data-dtype="Number" />
+    <div>/</div>
+    <input name="system.fortune.max" type="text" value="{{actor.system.fortune.max}}" data-dtype="Number" />
+    <a class="task-check rollable hidden" data-action-value="{{actor.system.fortune.value}}"
+      data-check-type="{{localize (lookup config.taskCheckTypes "fortune")}}"><i class="fas fa-dice"></i></a>
+  </div>
+  {{/if}}
+  <label class="stat-name">
+    {{localize "fs2e.stats.speed"}}
+  </label>
+  <div class="stat-value reveal-rollable">
+    <input name="system.speed" type="text" value="{{actor.system.speed}}" data-dtype="Number" />
+    <a class="task-check rollable hidden" data-action-value="{{actor.system.speed}}"
+      data-check-type="{{localize (lookup config.taskCheckTypes "speed")}}"><i class="fas fa-dice"></i></a>
+  </div>
+</section>

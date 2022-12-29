@@ -1,0 +1,25 @@
+<div class="gear-item item" data-item-id="{{_id}}">
+  <div class="gear-name reveal-rollable">
+    <h3>
+      {{#if inSheet}}
+      <a class="item-edit" title="{{localize "fs2e.sheet.edit"}}">{{name}}</a>
+      <a class="item-roll hidden rollable"><i class="fas fa-dice"></i></a>
+      {{else}}
+      {{name}}
+      {{/if}}
+    </h3>
+  </div>
+  <table class="item-stat-block">
+    <tr class="item-stat">
+      <th>{{localize "fs2e.armor.thunk"}}</th>
+      <th>{{localize "fs2e.armor.popBack"}}</th>
+      <th>{{localize "fs2e.armor.penalty"}}</th>
+    </tr>
+    <tr class="item-stat">
+      <td class="item-stat-value">{{system.thunk}}</td>
+      <td class="item-stat-value">{{system.popBack}}</td>
+      <td class="item-stat-value">{{system.penalty}}</td>
+    </tr>
+  </table>
+  {{{system.description}}}
+</div>

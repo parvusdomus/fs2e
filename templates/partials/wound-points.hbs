@@ -1,0 +1,26 @@
+<section class="wound-points">
+  <div class="wounds-header">
+    {{#if (eq type "vehicle")}}
+    {{localize "fs2e.sheet.chasePoints"}}
+    {{else}}
+    {{localize "fs2e.sheet.woundPoints"}}
+    {{/if}}
+  </div>
+  <div class="wounds">
+    <div class="wound-markers" style="--row-length: {{rowSize}}">
+      {{#times actor.system.wounds.max}}
+      <div class="wound-point {{#if (gt @index ../rowSize)}}bottom-row{{/if}}" data-index="{{@index}}">
+        {{#if (eq @index ../firstImpairment)}}
+        <div class="impairment">-1</div>
+        {{else if (eq @index ../secondImpairment)}}
+        <div class="impairment">-2</div>
+        {{/if}}
+        <div
+          class="wound-box {{#if (or (eq @index ../firstImpairment) (eq @index ../secondImpairment))}}impair{{/if}} {{#if (gte ../data.wounds.value @index)}}crossed{{/if}}">
+          <div>{{@index}}</div>
+        </div>
+      </div>
+      {{/times}}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,6 @@
+{{> "templates/dice/roll.html"}}
+{{#if (gte total 0)}}
+<h2>{{localize "fs2e.deathCheck.success"}}</h2>
+{{else}}
+<h2>{{localize "fs2e.deathCheck.failure"}}</h2>
+{{/if}}

@@ -1,0 +1,34 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64" />
+    <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
+  </header>
+  <div class="sheet-content">
+    <table>
+      <tr>
+        <th>{{localize "fs2e.vehicle.acceleration"}}</th>
+        <th>{{localize "fs2e.vehicle.frame"}}</th>
+        <th>{{localize "fs2e.vehicle.handling"}}</th>
+        <th>{{localize "fs2e.vehicle.personal"}}</th>
+      </tr>
+      <tr>
+        <td>
+          <input name="system.acceleration" type="text" value="{{item.system.acceleration}}" data-dtype="Number" />
+        </td>
+        <td>
+          <input name="system.frame" type="text" value="{{item.system.frame}}" data-dtype="Number" />
+        </td>
+        <td>
+          <input name="system.handling" type="text" value="{{item.system.handling}}" data-dtype="Number" />
+        </td>
+        <td>
+          <input name="system.personal" type="checkbox" {{checked item.system.personal}} />
+        </td>
+      </tr>
+    </table>
+    <div class="panelBorder sheet-card description">
+      <h2>{{localize "fs2e.sheet.description"}}</h2>
+      {{editor item.system.description target="system.description" button=true owner=owner editable=true}}
+    </div>
+  </div>
+</form>

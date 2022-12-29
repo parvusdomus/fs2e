@@ -1,0 +1,26 @@
+<div class="item shtick-border sheet-card {{item.type}}" data-type="{{item.type}}" data-item-id="{{_id}}">
+  <img class="shtick-icon" src={{img}}
+    title="{{localize 'fs2e.shtick.label' type=(localize (lookup config.shtickTypes data.type)) }}" />
+  <div class="shtick-card">
+    <div class="shtick-name reveal-rollable">
+      {{#if inSheet}}
+      <a class="shtick-toggle" title="{{localize " fs2e.sheet.edit"}}">{{name}}</a>
+      {{#if data.active}}
+      <i class="fas fa-check"></i>
+      {{/if}}
+      <a class="item-roll hidden rollable"><i class="fas fa-dice"></i></a>
+      {{else}}
+      {{name}}
+      {{/if}}
+    </div>
+    <div class="shtick-description">{{{item.system.description}}}</div>
+    <div class="shtick-cost">
+      {{#if data.fortuneCost}}
+      <div class="fortune-cost">{{item.system.fortuneCost}}</div>
+      {{/if}}
+      {{#if data.shotCost}}
+      <div class="shot-cost">{{item.system.shotCost}}</div>
+      {{/if}}
+    </div>
+  </div>
+</div>

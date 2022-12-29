@@ -1,0 +1,20 @@
+<form>
+  <div class="form-group">
+    <label>{{localize "fs2e.chat.taskCheck.options.modifier"}}</label>
+    <input type="text" name="modifier" value="{{modifier}}" />
+  </div>
+  <div class="form-group">
+    <label>{{localize "fs2e.chat.taskCheck.options.closedRoll"}}</label>
+    <input type="checkbox" name="closedRoll" {{#if closedRoll}} checked {{/if}} />
+  </div>
+  {{#if hasFortune}}
+  <div class="form-group">
+    <label>{{localize "fs2e.chat.taskCheck.options.useFortune"}}</label>
+    <input type="checkbox" name="useFortune" {{#if useFortune}} checked {{/if}} />
+  </div>
+  {{/if}}
+  <div class="form-group">
+    <label>{{localize "fs2e.chat.taskCheck.options.difficulty"}}</label>
+    <input type="text" name="difficulty" value="{{difficulty}}" />
+  </div>
+</form>

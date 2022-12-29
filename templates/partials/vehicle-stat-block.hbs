@@ -1,0 +1,45 @@
+<section class="stat-block">
+  <label class="stat-name">
+    {{localize "fs2e.vehicle.driving"}}
+  </label>
+  <div class="stat-value reveal-rollable">
+    <input type="text" disabled="true" value="{{drivingSkill}}" />
+    <a class="driving-check rollable hidden"><i class="fas fa-dice"></i></a>
+  </div>
+  <label class="stat-name">
+    {{localize "fs2e.vehicle.acceleration"}}
+  </label>
+  <div class="stat-value">
+    <input name="system.acceleration" type="text" value="{{item.system.acceleration}}" data-dtype="Number" />
+  </div>
+  <label class="stat-name">
+    {{localize "fs2e.vehicle.handling"}}
+  </label>
+  <div class="stat-value">
+    <input name="system.handling" type="text" value="{{item.system.handling}}" data-dtype="Number" />
+  </div>
+  <label class="stat-name">
+    {{localize "fs2e.vehicle.squeal"}}
+  </label>
+  <div class="stat-value reveal-rollable">
+    <input type="text" disabled="true" value="{{item.system.squeal}}" />
+  </div>
+  <label class="stat-name">
+    {{localize "fs2e.vehicle.frame"}}
+  </label>
+  <div class="stat-value">
+    <input name="system.frame" type="text" value="{{item.system.frame}}" data-dtype="Number" />
+  </div>
+  <label class="stat-name">
+    {{localize "fs2e.vehicle.crunch"}}
+  </label>
+  <div class="stat-value reveal-rollable">
+    <input type="text" disabled="true" value="{{item.system.crunch}}" />
+  </div>
+  <label class="stat-name">
+    {{localize "fs2e.vehicle.condition"}}
+  </label>
+  <div class="stat-value">
+    <input name="system.condition" type="text" value="{{item.system.condition}}" data-dtype="Number" />
+  </div>
+</section>

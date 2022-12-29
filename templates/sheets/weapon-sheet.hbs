@@ -1,0 +1,50 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <div class="img-wrapper">
+      <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64" />
+    </div>
+    <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
+  </header>
+  <div class="sheet-content">
+    <div class="item-stats">
+      <div class="item-stat">
+        <label>{{localize "fs2e.weapon.attackWith"}}</label>
+        <select name="system.attackWith">
+          {{#select item.system.attackWith}}
+          {{#each config.attackTypes as |name type|}}
+          <option value="{{type}}">{{localize name}}</option>
+          {{/each}}
+          {{/select}}
+        </select>
+      </div>
+      <div class="item-stat">
+        <label>{{localize "fs2e.weapon.damage"}}</label>
+        <input name="system.damage" type="text" value="{{item.system.damage}}" data-dtype="Number" />
+      </div>
+      <div class="item-stat">
+        <label>{{localize "fs2e.weapon.conceal"}}</label>
+        <input name="system.concealment" type="text" value="{{item.system.concealment}}" data-dtype="Number" />
+      </div>
+      <div class="item-stat">
+        <label>{{localize "fs2e.weapon.reload"}}</label>
+        <input name="system.reload" type="text" value="{{item.system.reload}}" data-dtype="Number" />
+      </div>
+      <div class="item-stat">
+        <label>{{localize "fs2e.weapon.mookBonus"}}</label>
+        <input name="system.mookBonus" type="text" value="{{item.system.mookBonus}}" data-dtype="Number" />
+      </div>
+      <div class="item-stat">
+        <label>{{localize "fs2e.weapon.pumpAction"}}</label>
+        <input name="system.pumpAction" type="checkbox" {{checked item.system.pumpAction}} />
+      </div>
+      <div class="item-stat">
+        <label>{{localize "fs2e.weapon.heavy"}}</label>
+        <input name="system.heavy" type="checkbox" {{checked item.system.heavy}} />
+      </div>
+    </div>
+    <div class="panelBorder sheet-card description">
+      <h2>{{localize "fs2e.sheet.description"}}</h2>
+      {{editor item.system.description target="system.description" button=true owner=owner editable=true}}
+    </div>
+  </div>
+</form>

@@ -1,0 +1,15 @@
+<div class="fs2e">
+  <p>
+    {{localize "fs2e.chat.interrupt.base" actor=actor.name}}
+  </p>
+  <p>
+    {{localize "fs2e.chat.interrupt.cost" shots=cost}}
+  </p>
+  <p>
+    {{#if shotsLeft}}
+    {{localize "fs2e.chat.interrupt.nextAction" initiative=initiative}}
+    {{else}}
+    {{localize "fs2e.chat.interrupt.nextSequence"}}
+    {{/if}}
+  </p>
+</div>

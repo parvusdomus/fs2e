@@ -1,0 +1,27 @@
+<div class="gear-item item" data-item-id="{{_id}}">
+  <div class="gear-name reveal-rollable">
+    <h3>
+      {{#if inSheet}}
+      <a class="item-edit" title="{{localize "fs2e.sheet.edit"}}">{{name}}</a>
+      <a class="item-roll hidden rollable"><i class="fas fa-dice"></i></a>
+      {{else}}
+      {{name}}
+      {{/if}}
+    </h3>
+  </div>
+  <table class="item-stat-block">
+    <tr class="item-stat">
+      <th>{{localize "fs2e.vehicle.acceleration"}}</th>
+      <th>{{localize "fs2e.vehicle.handling"}}</th>
+      <th>{{localize "fs2e.vehicle.frame"}}</th>
+    </tr>
+    <tr class="item-stat">
+      <td class="item-stat-value">{{system.acceleration}}</td>
+      <td class="item-stat-value">{{system.handling}} / {{localize "fs2e.vehicle.squeal"}}
+        {{system.squeal}}</td>
+      <td class="item-stat-value">{{system.frame}} / {{localize "fs2e.vehicle.crunch"}} {{system.crunch}}
+      </td>
+    </tr>
+  </table>
+  {{{system.description}}}
+</div>

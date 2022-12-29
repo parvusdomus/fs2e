@@ -1,0 +1,784 @@
+:root {
+  --macro-size: 51.1px;
+}
+
+body {
+  .GothamBook();
+}
+
+h1, h2, h3, h4, h5, h6 {
+  .BaronNeue();
+}
+
+#navigation {
+  #nav-toggle {
+    border: none;
+    .white-on-red();
+    .clipCorners(8px);
+  }
+
+  #scene-list {
+    .scene {
+      background: none;
+      border: none;
+      padding: 0;
+
+      .scene-name {
+        .BaronNeue();
+        padding: 10px 8px;
+        background-color: @main-color;
+        .clippedBorder(@borderThickness: @button-border-thickness);
+        color: black;
+      }
+      &.gm .scene-name {
+        .clippedBorder(@color:@gm-scene-border-color, @background: @gm-scene-bg, @borderThickness: @button-border-thickness);
+      }
+      &.view .scene-name {
+        background-color: @main-color;
+        color: @accent-color;
+      }
+      &.gm, &.view, &.context {
+        background: none;
+        border: none;
+        box-shadow: none;
+      }
+      ul.scene-players {
+        left: 8px
+      }
+    }
+  }
+  .canvas-shadow();
+}
+
+#context-menu{ 
+  border: none;
+  width: max-content;
+  min-width: 100%;
+  .white-on-red();
+  .clipCorners();
+  .canvas-shadow();
+
+  li.context-item:hover {
+    background-color: @accent-color;
+    color: black;
+    text-shadow: none;
+  }
+}
+
+#controls {
+  ol {
+    .scene-control, &.sub-controls {
+      &, .control-tool {
+        border: none;
+        background: none;
+        box-shadow: none;
+        color: black;
+      }
+      
+      & > i, .control-tool > i {
+        width: 40px;
+        height: 40px;
+        padding: @defaultCornerClip;
+        .clippedBorder(@borderThickness: @button-border-thickness);
+      }
+
+      .control-tool.toggle {
+        width: 40px;
+        height: 40px;
+        .clippedBorder(@color:@gm-scene-border-color);
+      }
+
+      &.active, & .control-tool.active, &:hover {
+        box-shadow: none;
+        border: none;
+        & > i {
+          .white-on-red();
+        }
+      }
+    }
+    .canvas-shadow();
+  }
+}
+
+#players {
+  background: none;
+  border: none;
+  color: black;
+  box-shadow: none;
+  .canvas-shadow();
+  h3 {
+    .white-on-red();
+    margin: 0;
+    .clipTop(@defaultCornerClip);
+  }
+
+  #player-list {
+    background: @accent-color;
+
+    .player-name.self {
+      color: @main-color;
+    }
+  }
+}
+
+#hotbar {
+  margin-left: 0.5rem;
+  .canvas-shadow();
+
+  .bar-controls {
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    border-radius: 0px;
+    .white-on-red();
+  }
+  #hotbar-directory-controls {
+    .clipLeft();
+  }
+  #hotbar-page-controls {
+    .clipRight();
+  }
+  #macro-list {
+    margin: 0;
+    border-radius: 0px;
+    border-color: @main-color;
+    background: @main-color;
+  }
+
+  .macro{
+    border-color: @main-color;
+    background: @translucent-bg-color;
+    &.active, &.inactive {
+      box-shadow: none;
+      &:hover {
+        box-shadow: 0 0 50px #000 inset;
+      } 
+    }
+
+    .macro-key {
+      .white-on-red();
+      .clipCorners(4px);
+    }
+
+    .tooltip{
+      border: none;
+      height: auto;
+      .BaronNeue();
+      .white-on-red();
+      .clipCorners();
+    }
+  }
+}
+
+#hud {
+  .BaronNeue();
+}
+
+.placeable-hud {
+  .canvas-shadow();
+
+  input[type="text"] {
+    border-radius: none;
+    box-shadow: none;
+    border: none;
+    padding-bottom: @baronBottomPadding;
+  }
+  
+  .control-icon {
+    border: none;
+    padding: 4px;
+    padding-bottom: @baronBottomPadding;
+
+    &.active {
+      border: none;
+      background-color: @main-color;
+    }
+  }
+}
+
+#token-hud {
+  .attribute {
+    border: none;
+
+    &.bar1, &.bar2 {
+      input {
+        border: none;
+      }
+    }
+    &.bar1 {
+      .clippedBorder(@color:#7cd000, @background: @hud-bg, @borderThickness: 1px);
+    }
+    &.bar2 {
+      .clippedBorder(@color:#659db5, @background: @hud-bg, @borderThickness: 1px);
+    }
+  }
+}
+
+#menu {
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+
+  .canvas-shadow();
+
+  #menu-items {
+    background: @hud-bg;
+    padding: 8px;
+    .clipCorners(@shtick-bevel);
+    li h4 {
+      font-size: 28px;
+    }
+  }
+}
+
+.app:not(#navigation, #players, .control-tools) {
+  border: none;
+  .white-on-red();
+  .clippedBorder();
+  &:not(#sidebar){
+    position: fixed;
+  }
+  padding: 12px 0px;
+}
+
+.window-app {
+  .window-header {
+    .white-on-red();
+    border: none;
+  }
+  .window-content {
+    background-image: unset;
+  }
+}
+
+#sidebar-tabs {
+  border: none;
+  box-shadow: none;
+  .white-on-red();
+
+  & > .collapse {
+    color: @accent-color;
+  }
+}
+
+#sidebar.collapsed {
+  padding: 0;
+  .cancelClippedBorder();
+  .clipCorners(6px);
+}
+
+input {
+  background: @input-bg-color;
+  color: black;
+  border: none;
+  border-radius: 0;
+
+  &[type="text"], &[type="number"], &[type="date"], &[type="time"], &[type="password"], &[type="file"]{
+    border: none;
+    .clipCorners(6px);
+    padding: 0px 8px;
+
+    &:focus {
+      border: none;
+      .input-shadow();
+    }
+  }
+
+  &::-webkit-file-upload-button {
+    border: none;
+    .white-on-red();
+    .clipCorners(4px);
+    margin: 2px 0px;
+    margin-right: 2px;
+  }
+
+  &[type="checkbox"] {
+    .clippedBorder(@clipSize:25%, @borderThickness:1px);
+  
+    &:checked{
+      appearance: none;
+      background: @main-color;
+      filter: none;
+      &::before {
+        content: 'X';
+        .BaronNeue();
+        font-size: 1.25em;
+        color: @accent-color;
+        text-align: center;
+        display: block;
+      }
+    }
+    &:disabled {
+      .clippedBorder(@clipSize:25%, @borderThickness:1px, @color: @disabled-input-color, @background: @disabled-input-color);
+    }
+  }
+  &[type="range"]{
+    &::-webkit-slider-thumb {
+      background: @main-color;
+      border: none;
+      .clipCorners(2px);
+
+      &:disabled {
+        background: @disabled-input-color;
+      }
+    }
+
+    & + .range-value {
+      .clippedBorder(@clipSize:4px, @borderThickness:1px);
+    }
+  }
+}
+
+button {
+  border: none;
+  .BaronNeue();
+  .clippedBorder(@clipSize:4px, @borderThickness:2px);
+
+  font-size: 0.9em;
+
+  &:hover:not(:disabled) {
+    .white-on-red();
+  }
+
+  &:disabled {
+    .clippedBorder(@clipSize:4px, @borderThickness:2px, @color: @disabled-input-color, @background: @disabled-input-color);
+  }
+}
+
+select {
+  border: none;
+  .BaronNeue();
+  background: @input-bg-color;
+  color: black;
+  .clipCorners(6px);
+
+  &:focus {
+    border: none;
+    box-shadow: none;
+  }
+}
+
+textarea {
+  border: none;
+  border-radius: 0;
+  background: @input-bg-color;
+  .clipBottom();
+
+  &:focus {
+    .input-shadow();
+  }
+}
+
+.tox {
+  &.tox-tinymce {
+    background: @main-color;
+    .clipCorners();
+    padding: 2px;
+
+    .tox-edit-area__iframe {
+      background: @translucent-accent-color;
+      .clipBottom();
+    }
+  }
+
+  .tox-toolbar__primary {
+    background: @main-color !important;
+  }
+
+  .tox-tbtn {
+    background: @accent-color !important;
+  }
+
+  .tox-toolbar__group {
+    gap: 0.25em !important;
+  }
+}
+
+.editor-content {
+  @import url("./mce.less");
+}
+
+form {
+  button {
+    border: none;
+    background: none;
+  }
+
+  label {
+    .BaronNeue();
+  }
+
+  .notes {
+    padding: 0px 4px;
+  }
+
+  h3.form-header {
+    border: none;
+    .white-on-red();
+    .clipCorners(4px);
+  }
+}
+
+.dialog {
+  .dialog-buttons {
+    button {
+      border: none; 
+      background: unset;
+
+      &.default {
+        border: none;
+        background: unset;
+      }
+
+      &:hover {
+        background: @main-color;
+      }    
+    }
+  }
+} 
+
+#client-settings nav.tabs, #av-config .sheet-tabs, .sheet .sheet-tabs, .tabs {
+  .BaronNeue();
+  font-size: 12px;
+  color: @main-color;
+  border-bottom-color: @main-color;
+
+  .item.active {
+    .white-on-red();
+    text-shadow: unset;
+  }
+}
+
+.filepicker {
+  .current-dir {
+    button {
+      border: none;
+      background: unset;
+      &:hover {
+        background: @main-color;
+      }  
+    }
+  }
+
+  .display-modes a{
+    
+    .clippedBorder(@borderThickness: 1px, @clipSize: 4px);
+
+    &.active {
+      border: none;
+      .white-on-red();
+    }
+  }
+
+  .directory {
+    .clippedBorder(@borderThickness: 1px, @clipSize: 4px);
+    background: @main-color;
+
+    & > li {
+      border-color: @main-color;
+      background: @translucent-bg-color;
+
+      &.picked {
+        .white-on-red();
+      }
+    }
+  }
+}
+
+.directory {
+  padding: 0 0.5em;
+
+  .directory-list {
+    position: relative;
+    margin: 0.25em 0.25em;
+    padding: 10px 0px;
+    .red-carpet();
+
+    .directory-item {
+      &:not(.folder) {
+        border: none;
+        .clippedBorder(@color:black, @borderThickness:2px, @contextMenu:true);
+        color: black;
+  
+        & > img {
+          .clipCorners();
+        }
+      }
+      &.folder .context {
+        background-color: @main-color !important;
+      }
+    }
+  }
+
+  .directory-header {
+    .header-search {
+      .white-on-red();
+      .clipCorners(6px);
+
+      input {
+        background-color: @translucent-accent-color;
+      }
+    }
+  }
+}
+
+#chat-log {
+  position: relative;
+  margin-bottom: 0.5em;
+  .red-carpet();
+}
+
+.chat-message {
+  border: none;
+  background: none;
+  padding: 0;
+  .border-wrapper{
+    .clippedBorder(@color: var(--border-color, @main-color), @borderThickness: 2px);
+    padding: 15px 0;
+  }
+
+  .message-header {
+    padding: 0.25em 8px;
+    .white-on-red();
+    background: var(--border-color, @main-color);
+  }
+
+  &.whisper {
+    border: none;
+    background: none;
+
+    .border-wrapper {
+      background: @whisper-color;
+    }
+  }
+
+  &.emote {
+
+    border: none;
+    background: none;
+
+    .border-wrapper {
+      background: #f3edde;
+    }
+  }
+
+  .message-sender{
+    font-size: 12px;
+  }
+  .message-content{
+    padding: 8px 8px 0px;
+  }
+}
+
+.dice-roll {
+  &, .dice-result, .roll-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+  }
+  .dice-formula {
+    border: none;
+    .BaronNeue();
+    .clippedBorder(@clipSize: 4px, @borderThickness: 2px);
+    margin-bottom: 0px;
+  }
+
+  .dice-total {
+    border: none;
+    .white-on-red();
+    .clipCorners(4px);
+  }
+}
+
+.inline-roll .dice-tooltip {
+  padding: 8px;
+  .clippedBorder();
+  position: fixed;
+}
+
+.dice-roll, .inline-roll {
+  .dice-tooltip {
+    .part-header {
+      border-color: @main-color;
+      .part-total {
+        border: none;
+        .white-on-red();
+        .clipCorners(4px);
+      }
+    }
+
+    .part-formula {
+      .BaronNeue();
+      color:  @main-color;
+    }
+
+    .dice-rolls {
+      .BaronNeue();
+    }
+  }
+}
+
+#chat-controls {
+  padding: 8px 8px 4px;
+  .white-on-red();
+  .clipTop();
+
+  .roll-type-select {
+    background: @select-bg-color;
+  }
+}
+
+#chat-form {
+  background: @main-color;
+  display: flex;
+  justify-content: center;
+  .clipBottom();
+  
+  textarea {
+    background:@translucent-accent-color;
+    width: calc(100% - 8px);
+    height: calc(100% - 4px);
+  }
+}
+
+#combat {
+  #combat-round {
+    .clipTop(8px);
+    border: none;
+	  .BaronNeue();
+    .white-on-red();
+
+    .encounters {
+      a, h4 {
+        color: @accent-color;
+      }
+    }
+  }
+
+  #combat-controls {
+    .clipBottom(8px);
+	  .BaronNeue();
+    .white-on-red();
+  }
+
+  #combat-tracker {
+    padding: 10px 0px;
+  }
+
+  li.combatant {
+    border: none;
+    .BaronNeue();
+
+    .token-name, .token-initiative .initiative {
+      text-shadow: none;
+    }
+
+    .token-resource {
+      color: black;
+    }
+
+    .roll{
+      filter: invert(100%);
+
+      &:hover {
+        filter: none;
+      }
+    }
+
+    .token-name .combatant-control.active {
+      color: @main-color;
+    }
+
+    &.active {
+      .clippedBorder(@borderThickness:2px);
+    }
+
+    &.hover, &:hover {
+      &.token-resource {
+        color: @accent-color;
+      }
+      background: @hover-color;
+    }
+  }
+}
+
+#scenes {
+  .scene {
+    .cancelClippedBorder();
+    h3 {
+      color: @accent-color;
+    }
+  }
+}
+
+#playlists {
+  .global-control {
+    .clippedBorder(@clipSize:8px);
+
+    &:not(.collapsed){
+      padding: 8px 0px;
+    }
+
+    .playlist-header {
+      .white-on-red();
+    }
+
+    .playlist-sounds {
+      * {
+        color: black;
+      }
+    }
+  }
+
+  .sound-control {
+    color: black;
+  }
+}
+
+#compendium {
+  .compendium-type {
+    border: none;
+    .clippedBorder(@contextMenu:true, @borderThickness: 2px);
+    padding: 8px 0px; 
+
+    &:not(:last-child) {
+      margin-bottom: 0.25em;
+    }
+    
+    h3 {
+      border: none;
+      .white-on-red();
+    }
+  }
+
+  ol.compendium-list {
+    padding: 8px 8px 0px;
+  }
+
+  li.compendium-pack {
+    .status-icons {
+      right: 8px;
+      color: @main-color;
+    }
+
+    .compendium-footer {
+      color: black;
+    }
+  } 
+}
+
+.compendium {
+  .header-search {
+    height: 32px;
+  }
+}
+
+#settings {
+  h2 {
+    .white-on-red();
+  }
+
+  #game-details {
+    color: black;
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "{{Name}}",
+  "type": "shtick",
+  "img": "systems/fs2e/icons/shticks/{{Type}}.png",
+  "data": {
+    "type": "{{Type}}",
+    "fortuneCost": {{FortuneCost}},
+    "shotCost": {{ShotCost}},
+    "description": "{{Description}}"
+  }
+}

@@ -1,0 +1,20 @@
+Name,Damage,Conceal,Reload,PumpAction,Skulls
+Baseball bat,13,5,0,false,0
+Mossberg Special Purpose Shotgun,13,5,4,true,0
+Colt 1911A,19,2,4,false,0
+Desert Eagle .357 Magnum,11,3,3,false,0
+Chiappa Rhino,12,3,5,false,0
+Homemade Shotgun,14,5,4,true,0
+Homemade Rifle,15,5,1,true,0
+Colt Detective Special,9,1,5,false,0
+Remington 870 Police,13,5,4,true,0
+Taurus Model 85,9,2,5,false,0
+Beretta M12,10,5,6,false,0
+HK MP5,10,5,1,false,0
+SVD Dragunov,13,5,3,false,0
+Beretta 92FS Centurion,10,2,3,false,0
+Nunchaku,8,3,0,false,0
+Smith & Wesson Model 29,11,3,5,false,0
+Winchester Model 70,13,5,5,false,0
+Rossi Model 515,8,2,4,false,0
+Throwing Stars,5,0,0,false,0

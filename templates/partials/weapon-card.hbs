@@ -1,0 +1,24 @@
+<div class="weapon-card item" data-item-id="{{_id}}" data-weapon-damage={{system.damage}}>
+  <div class="weapon-info weapon-name">
+    <p>
+      {{#if inSheet}}
+      <a class="item-roll">{{name}}</a>
+      {{else}}
+      {{name}}
+      {{/if}}
+    </p>
+  </div>
+  <div class="weapon-info weapon-stats">
+    <p>
+      {{system.damage}}/{{system.concealment}}/{{#if system.reload}}{{system.reload}}{{else}}-{{/if}}
+    </p>
+    <div class="weapon-effects">
+      {{#if system.pumpAction}}
+      <img src="systems/fs2e/icons/weapon_effects/pump_action.png" height="20">
+      {{/if}}
+      {{#times system.mookBonus}}
+      <img src="systems/fs2e/icons/weapon_effects/skull.png" height="20">
+      {{/times}}
+    </div>
+  </div>
+</div>

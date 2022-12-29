@@ -1,0 +1,25 @@
+.fs2e.sheet .wound-points {
+  background-color: @main-color;
+  .wounds-header {
+    text-align: center;
+    font-size: 0.9rem;
+    color: @accent-color;
+  }
+  .wound-point {
+    .GothamBook(bold);
+  }
+  .wound-box {
+    font-size: 0.87rem;
+    background-color: @accent-color;
+    .clippedBorder(@main-color, 2px, @accent-color, 33%);
+
+    &.impair {
+      color: @accent-color;
+      .clippedBorder(@accent-color, 2px, @main-color, 33%);
+    }
+  }
+  .impairment {
+    font-size: 1.05rem;
+    color: @accent-color;
+  }
+}

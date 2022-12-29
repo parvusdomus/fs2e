@@ -1,0 +1,63 @@
+Name,Type,FortuneCost,ShotCost,Description
+Establishing Shot,core,0,0,<p>Your first Martial Arts attack of any fight gets a +2 bonus.</p>
+Mounting Fury I,core,0,0,"<p>If you miss with a Martial Arts attack, you gain a +1 cumulative bonus to your next Martial Arts attack. The bonus resets to 0 after you hit, and at the end of the fight.</p>"
+Very Big,core,0,0,<p>You make Up Checks and gain Marks of Death only when you reach 50 Wound Points. Impairment of –1 occurs only at 40 Wound Points; Impairment of –2 at 45 Wound Points.</p>
+Strong as an Ox,core,0,0,"<p>Add 3 to your Damage on any successful Martial Arts strike, including strikes with hand-to-hand weapons. (Damage Values for your starting weapons already include this bonus.) You can use absurdly large objects, like motorcycles, as improvised weapons. You also get +3 to all Strength Checks</p>"
+Healthy as a Horse,core,0,0,<p>You get a +3 bonus to Constitution Checks.</p>
+The bigger they come...,disadvantage,0,0,"<p>Toughness is reduced by –5 if you reach 50 or more Wound Points, until all Death Checks from this fight have been resolved</p>"
+Lucky You,core,0,0,"<p>When you run out of Fortune, roll a die. On a 1 or 2, regain all your spent Fortune.</p>"
+Improvise Weapon Mastery,core,0,0,"<p>Gain +1 Martial Arts when fighting with an improvised weapon found at the scene. After 3 successful attacks, you lose the bonus—unless you describe yourself picking up and using a different improvised weapon (shot cost 1).</p>"
+Accidental Awesome,core,0,0,"<p>After you fail an Attack Check with an improvised weapon, add a free Fortune die to your next check or Dodge.</p>"
+Ready Resupply,core,0,1,"<p>When an ally gets a Way-Awful Failure on an attack, is disarmed, or fails a Reload Check, you may spend 1 shot as an interrupt: that ally may make an attack as an interrupt at a shot cost of 0 and gains +2 Damage (stackable) until the end of the fight.</p>"
+Bag Full of Guns II,gun,0,0,"<p>You rotate through a selection of guns over the course of a fight. Start each fight with a revolver (9/2/6.) Each time you attack a named foe and fail to dish out more than 15 Wound Points, spend 0 shots to move to the next item in this gun list: Colt 1911A 10/2/4 Desert Eagle .357 Magnum 11/3/3 Chiappa Rhino 12/3/5 Mossberg Special Purpose 13/5/4 homemade shotgun 14/5/4 homemade rifle 15/5/1 Homemade weapons fall apart at end of fight. Only you can use them.</p>"
+Nutball Luck,core,1,0,<p>Spend 1 Fortune and 0 shots to gain +2 Defense vs. Guns attacks and +3 Toughness vs. explosion and debris damage until end of sequence.</p>
+"Oops, Forgot That One",disadvantage,0,0,"<p>You always fail Concealment Checks. If searched for weapons, the searchers always find everything you’re carrying and completely disarm you. Even if you said you got rid of all your weapons, they always find at least a hidden ankle piece. (This does not mean that you always have a weapon.)</p>"
+Wild Grenade,gun,1,0,"<p>When you miss with a grenade, you may spend 1 Fortune. Characters between you and your target do not make Fortune rolls to avoid it. Instead you and a nearby character of your choice, other than the target, take 20 Damage from flying debris.</p>"
+Mutant Punch,core,0,0,<p>Make hand-to-hand attacks using your Mutant Attack Value.</p>
+Very Strong,gene,0,1,"<p>Spend 1 shot. Until end of fight, add 3 to your Damage on any successful hand-to-hand strike (using your Mutant Attack Value) including strikes with handto-hand weapons. You can use absurdly large objects, like parking meters, as improvised weapons.</p>"
+Very Fast,gene,2,0,"<p>Spend 2 Genome points. Until end of sequence, the shot costs of all your actions decreases by 1, with a minimum of 1 per action. You can move up to 30 m per sequence.</p>"
+Force Shield,gene,1,1,<p>Spend 1 Genome point and 1 shot; your Defense increases by 1 until end of sequence.</p>
+Push,gene,0,3,"<p>Make a 3-shot ranged attack, Damage Value 11, using your Mutant Attack Value. If you deliver a Smackdown, the target flies X meters through the air directly away from you, where X = the number of Wound Points you dish out.</p>"
+Berserk Rage,gene,1,1,<p>Spend 1 Genome point and 1 shot; your Mutant Attack Value increases by 2 until the end of the sequence</p>
+Pain Eater,gene,0,0,"<p>When your attack takes a foe from 0 to 1 Impairment, or from 1 to 2 Impairment, regain 3 spent Genome points. When an ally’s attack takes a foe from 0 to 1 Impairment, or from 1 to 2 Impairment, regain 1 spent Genome point.</p>"
+Glutton For Punishment,core,0,0,"<p>When you take Wound Points from a Martial Arts attack, or take non-attack damage, your next Martial Arts attack this fight gets a +2 bonus. This bonus stacks with other effects but not with itself.</p>"
+Underdog Desperation,core,0,0,<p>Add +2 Toughness vs. opponents with fewer Wound Points than you.</p>
+Indefatigable,core,0,0,<p>Impairment points do not decrease your Martial Arts attack value.</p>
+Ouch!,core,0,0,"<p>When you miss with an unarmed attack, you take X Wound Points, where X equals the absolute value of your Swerve. Your next Martial Arts attack this fight gets a +X bonus. If successful, heal X Wound Points. This schtick is always active.</p>"
+Stop Right There!,gun,0,1,<p>Spend 1 shot to automatically stop an enemy from Cheesing It.</p>
+Take The Shot,gun,0,0,<p>Add +4 Guns vs. targets using hostages as human shields.</p>
+Both Guns Blazing II,gun,0,0,"<p>Fire two guns simultaneously at your opponent; these must be handguns or otherwise outfitted with a pistol grip. Treat as one attack at Guns –1, with the Damage of both guns added together, and the opponent’s Toughness doubled.</p>"
+Carnival of Carnage III,gun,0,0,<p>Add +2 Guns vs. mooks. Subtract 1 from the shot cost of any attack on a mook or mooks. Minimum shot cost remains 1.</p>
+Heroic Blodshed,disadvantage,0,0,"<p>In the climactic fight of an adventure, any attack that deals you more than 4 Wound Points deals an additional 3 Wound Points.</p>"
+Inured to Weirdness,core,0,0,"<p>When a Sorcery, Creature, or Scroungetech attack misses you, regain a spent Magic point.</p>"
+Juncture Adapted,core,0,0,"<p>When in your home juncture, ignore any juncture costs for Sorcery.</p>"
+Hair-Trigger Neckhairs,gun,0,0,<p>Gain +1 Defense for the first sequence of any fight your opponents start unexpectedly.</p>
+Ghost Sense,sorcery,1,0,"<p>Spend 1 Magic to see the ghosts all around you in a single scene. Unless you count the odd grotesque transformation or ineffective lunge in your direction, they can’t really communicate with you. But their presence and appearance may provide clues to past events in the area. Specialty: Divination</p>"
+Banishment,sorcery,3,3,"<p>Spend 3 Magic and 3 shots: on a Sorcery success against a supernatural creature’s Defense, it Cheeses It. On a failure, you regain the Magic points spent. Specialty: Summoning</p>"
+Hands Without Shadow,fu,0,0,"<p>+X Martial Arts vs. opponents whose Defense values, bonuses included, exceed your current Defense. X = the difference between Defense values</p>"
+Dim Mak,fu,3,0,"<p>Any time after the 6th shot of the 2nd sequence, spend 3 Chi and make a Martial Arts punch attack against a featured foe. If successful, ignore normal Damage determination; the foe’s Wound Point total is now 34 for a featured foe or 49 for a boss. If unsuccessful, regain 2 Chi.</p>"
+Whirl of Fury,fu,1,0,"<p>Spend 1 Chi as you make a Martial Arts nunchaku attack. If you hit, this and all of your nunchaku attacks for the rest of the fight have a Damage Value of 14.</p>"
+Lightning Fist,fu,1,1,"<p>When you hit an opponent with a Martial Arts punch attack, spend 1 Chi and 1 shot as an interrupt. For this attack, and until next keyframe, your target’s Toughness is halved (round fractions up)</p>"
+Blur of Rage,fu,1,0,"<p>Spend 1 Chi as you make a Martial Arts nunchaku attack against a mook. Until next keyframe, roll a die whenever a mook attacks you. On an even result, the mook drops before it can attack.</p>"
+Signature Weapon,gun,0,0,<p>Your favorite Smith & Wesson Model 29 deals 3 more damage than the norm</p>
+Blam Blam Epigram,gun,1,0,"<p>Add 1 to the shot cost of any Guns attack and make a pithy quip before or after shooting. The Damage Value of your weapon increases by 2 against a non-Impaired opponent, by 8 against an Impaired opponent</p>"
+Justice Bringer,core,0,0,"<p>Add +2 Guns vs. any target you know to be a murderer, torturer, or felony sex offender.</p>"
+Hot Pursuit,driving,1,0,<p>Spend 1 Fortune to get +2 Driving until next keyframe when you are the pursuer in a vehicle chase.</p>
+Tight Roll I,driving,0,0,"<p>When a vehicle you’re driving crashes, you and all occupants gain +2 Toughness against crash damage.</p>"
+Finding The Tell,core,0,0,<p>Add +2 to attacks against characters you spoke with in the previous scene.</p>
+Needling Remark,core,1,0,"<p>When exchanging barbs with a character in a non-combat scene, spend 1 Fortune. Until the end of the adventure, that character gets +1 to attack you; you get +2 to attack that character.</p>"
+Cut The Bull,core,0,0,"<p>When you and the other PCs are speculating as to the best course of action, or as to the motivations of a given character, you can spend a Fortune point to have the GM tell you whether your speculation is correct or incorrect.</p>"
+Disarming Shot,gun,0,0,"<p>Take a –1 penalty to your attack roll against a foe carrying a weapon. If your attack hits, the foe drops the weapon. The shot cost of their next attack increases by +3. After this attack the foe is considered to have their weapon back. Against bosses, take a –3 penalty to your attack to use this ability.</p>"
+Distraction,core,0,0,"<p>Describe a distracting nonlethal assault against your target. Instead of damage, on a successful Martial Arts attack, the target suffers 3 Impairment for a number of shots equal to your Outcome. You can’t further distract an already distracted opponent.</p>"
+"Look Out, Kid!",core,0,0,<p>Roll a die when you are attacked while benefiting from a Defense boost. On an even result the boost continues until end of next shot.</p>
+A Ride Is A Ride,driving,0,0,<p>Ignore Unfamiliar Vehicle penalties</p>
+The Fox's Retreat,fu,1,0,"<p>Spend 1 Chi. Until next keyframe, Dodges increase your Defense by +4.</p>"
+Eyes Of The Fox,fu,2,0,<p>Pay 2 Chi to reduce Wound Points dealt to you by an attack to 3.</p>
+Forceful Dart,fu,1,0,<p>Spend 1 Chi to give your thrown darts or throwing stars a Damage Value of X - 1 until next keyframe. X = the highest base Damage Value of any weapon currently being wielded by an ally (ignoring any special damage bonuses the ally gets).</p>
+Chi Blast,sorcery,0,0,"<p>As a standard 3-shot action, direct a ranged attack of raw magical energy at a combatant of your choice, using your Sorcery attack value, Damage 9. Specialty: Blast.</p>"
+Magnetic Blast,sorcery,0,0,"<p>When you hit a vehicle with a Chi Blast, it takes +3 Condition Points. Specialty: Blast.</p>"
+Fight Finder,sorcery,1,0,"<p>Spend 1 Magic to know the location of the nearest group of people who want to kill you. You do not know which group. If no one wants to kill you, it must be early in the series. You get the Magic point back. Specialty: Divination</p>"
+Flight,sorcery,0,0,"<p>Fly through the air, moving up to 5 m per shot. Specialty: Movement.</p>"
+Observe Chi,sorcery,0,0,"<p>See the flow of chi in an area, noting how strong or weak it is and if it is corrupted or impinged upon by some unnatural force. Immediately identify feng shui sites. Tell whether an individual you can see in person is attuned to at least one feng shui site. Specialty: Divination.</p>"
+Heal Wounds,sorcery,1,4,<p>Spend 4 shots and 1 Magic to reduce a character’s Wound Point total by the result of your Sorcery Check. Specialty: Heal.</p>
+Scroll of Spells,core,2,3,"<p>Spend 2 Magic to gain any Sorcery schtick you don’t have, provided you have at least one schtick within that specialty, until end of session. Takes 3 shots if used in combat (6 shots if you’re looking at the rulebook when your shot comes up).</p>"

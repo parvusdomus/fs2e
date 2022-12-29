@@ -1,0 +1,27 @@
+.fs2e.sheet.namedCharacter {
+  .stat-block {
+    padding: 0 0.75em;
+    .stat-name, .stat-value {
+      width: @sidebar-bg-width;
+    }
+    .stat-value, .stat-value > * {
+      .GothamBook(bold);
+      text-transform: uppercase;
+    }
+
+    .stat-name {
+      font-size: 1.075rem;
+      margin-top: 0.15em;
+      z-index: 1;
+    }
+    .stat-name, .stat-name > * {
+      color: @accent-color;
+      background-color: @main-color;
+    }
+    .stat-value {
+      font-size: 1.8rem;
+      background-color: @accent-color;
+      .clipCorners(@defaultCornerClip);
+    }
+  }
+}

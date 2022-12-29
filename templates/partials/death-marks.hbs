@@ -1,0 +1,15 @@
+<section class="death-marks">
+  <h2 class="reveal-rollable">
+    <div>{{localize "fs2e.sheet.deathMarks"}}</div>
+    <a class="death-check rollable hidden"><i class="fas fa-dice"></i></a>
+  </h2>
+  <div class="death-icons">
+    {{#times 6}}
+    <div class="mark-container {{#if (gte ../data.deathMarks @index)}}crossed{{/if}}">
+      <div class="img-container">
+        <img src="systems/fs2e/icons/sheets/death-mark.png" height="50">
+      </div>
+    </div>
+    {{/times}}
+  </div>
+</section>

@@ -1,0 +1,19 @@
+<section class="skills panelBorder sheet-card item-list">
+  <h2>
+    <div>{{localize "fs2e.sheet.skills"}}</div>
+    <a class="item-create" data-type="skill" title="{{localize "fs2e.sheet.addSkill"}}">
+      <i class="fas fa-plus"></i>
+    </a>
+  </h2>
+  {{#each skills as |skill id|}}
+  <div class="skill-item item reveal-rollable" data-item-id="{{skill._id}}">
+    <input class="skill-name inline-edit" data-field="name" type="text" value="{{skill.name}}" placeholder="{{localize "fs2e.sheet.skillName"}}" />
+    <a class="task-check rollable hidden" data-action-value="{{skill.system.value}}" data-check-type="{{skill.name}}"><i class="fas fa-dice"></i></a>
+    <input class="skill-value inline-edit" data-field="system.value" type="text" value="{{skill.system.value}}" placeholder="7" data-dtype="Number" />
+  </div>
+  {{/each}}
+  <div class="unskilled-check reveal-rollable">
+    <span>{{localize "fs2e.sheet.unskilledCheck"}}</span>
+    <a class="task-check rollable hidden" data-action-value="7" data-check-type="{{localize "fs2e.skills.unskilled"}}"><i class="fas fa-dice"></i></a>
+  </div>
+</section>

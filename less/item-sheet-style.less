@@ -1,0 +1,45 @@
+.item-stats {
+  border: none;
+  .white-on-red();
+  .clipCorners();
+  .BaronNeue();
+
+  input, select {
+    color: black;
+    background: @accent-color;
+  }
+
+  input {
+    text-align: center;
+  }
+}
+
+.fs2e.sheet.item {
+  .window-content {
+    header {
+      position: relative;
+      &::before {
+        content: "";
+        background: @main-color;
+        position: absolute;
+        top: 0.25em;
+        left: 0.25em;
+        right: 0.25em;
+        bottom: 0.25em;
+        z-index: -1;
+        .clipCorners();
+      }
+      
+
+      input {
+        background: @accent-color;
+      }
+    }
+  }
+
+  .effects-list {
+    li {
+      border-bottom: 1px solid @main-color;
+    }
+  }
+}

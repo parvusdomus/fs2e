@@ -1,0 +1,60 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <div class="img-wrapper">
+      <img src={{item.img}}
+        title="{{localize 'fs2e.shtick.label' type=(localize (lookup config.shtickTypes data.type)) }}" height="64"
+        width="64" />
+    </div>
+    <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
+  </header>
+  <div class="sheet-content">
+    <div class="item-stats">
+      <div class="item-stat">
+        <label>{{localize "fs2e.shtick.type"}}</label>
+        <select class="shtick-type" name="system.type">
+          {{#select item.system.type}}
+          {{#each config.shtickTypes as |name type|}}
+          <option value="{{type}}">{{localize name}}</option>
+          {{/each}}
+          {{/select}}
+        </select>
+      </div>
+      <div class="item-stat">
+        <label>{{localize "fs2e.shtick.fortuneCost"}}</label>
+        <input name="system.fortuneCost" type="text" value="{{item.system.fortuneCost}}" data-dtype="Number" />
+      </div>
+      <div class="item-stat">
+        <label>{{localize "fs2e.shtick.shotCost"}}</label>
+        <input name="system.shotCost" type="text" value="{{item.system.shotCost}}" data-dtype="Number" />
+      </div>
+    </div>
+    <div class="panelBorder sheet-card description">
+      <h2>{{localize "fs2e.sheet.description"}}</h2>
+      {{editor item.system.description target="system.description" button=true owner=owner editable=true}}
+    </div>
+    <div class="panelBorder sheet-card effects-list">
+      <h2>{{localize "fs2e.sheet.effects"}}
+        <a class="effect-control" data-action="create">
+          <i class="fas fa-plus"></i>
+        </a>
+      </h2>
+      <ol>
+        {{#each effects as |effect|}}
+        <li class="item effect" data-effect-id="{{effect.id}}">
+          <div class="item-name effect-name">
+            <h4>{{effect.label}}</h4>
+          </div>
+          <div class="effect-controls">
+            <a class="effect-control" data-action="edit" title="{{localize 'DND5E.EffectEdit'}}">
+              <i class="fas fa-edit"></i>
+            </a>
+            <a class="effect-control" data-action="delete" title="{{localize 'DND5E.EffectDelete'}}">
+              <i class="fas fa-trash"></i>
+            </a>
+          </div>
+        </li>
+        {{/each}}
+      </ol>
+    </div>
+  </div>
+</form>

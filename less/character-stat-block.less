@@ -1,0 +1,48 @@
+.fs2e.sheet.namedCharacter {
+  .stat-block {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-align-last: center;
+    align-items: center;
+
+    position: relative;
+
+    .stat-name {
+      padding-bottom: @baronBottomPadding;
+    }
+
+    .stat-value {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+
+      input {
+        margin-top: 0.25em;
+      }
+    }
+
+    .task-check {
+      position: absolute;
+      padding: 0.35em;
+    }
+
+    .stat-name, .stat-value {
+      width: 100%;
+    }
+
+    .stat-name > select {
+      width: 100%;
+    }
+
+    select {
+      font-size: 1em;
+      padding-bottom: 0;
+    }
+    input {
+      border: none;
+      margin-bottom: 0.25em;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <div class="sidebar">
+    <h1 class="archetype">
+      <div data-archetype="{{localize typeString}}">
+        {{localize typeString}}
+      </div>
+    </h1>
+    <div class="actor-img">
+      <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+    </div>
+    <div class="stats-and-weapons">
+      {{> "systems/fs2e/templates/partials/vehicle-stat-block.hbs"}}
+      <section class="weapon-list item-list">
+        {{#each weapons as |weapon id|}}
+        {{> "systems/fs2e/templates/partials/weapon-card.hbs" weapon inSheet=true}}
+        {{/each}}
+      </section>
+    </div>
+  </div>
+  <div class="sheet-body">
+    <div class="panelBorder sheet-card">
+      <h2>{{localize "fs2e.sheet.vehicleName"}}</h2>
+      <input class="actor-name" name="name" type="text" value="{{actor.name}}" placeholder="Name" />
+    </div>
+    <div class="panelBorder sheet-card">
+      <h2>{{localize "fs2e.sheet.vehicleCharacteristics"}}</h2>
+      <div class="vehicleCharacteristics">
+        <div class="form-group">
+          <input name="data.isMilitaryVehicle" type="checkbox" {{checked data.isMilitaryVehicle}} />
+          <label>{{localize "fs2e.vehicle.military"}}</label>
+        </div>
+        <div class="form-group">
+          <input name="data.isPersonalVehicle" type="checkbox" {{checked data.isPersonalVehicle}} />
+          <label>{{localize "fs2e.vehicle.personal"}}</label>
+        </div>
+      </div>
+    </div>
+    <div class="panelBorder sheet-card passengers">
+      <h2 class="passengers-header">
+        <div>{{localize "fs2e.vehicle.passengers"}}</div>
+        <a class="passenger-control" data-action="add"><i class="fas fa-plus"></i></a>
+        <a class="passenger-control" data-action="empty"><i class="fas fa-door-open"></i></a>
+      </h2>
+      <ol class="passenger-list">
+        {{#each passengers as |passenger id|}}
+        <li class="passenger seat" data-passenger-id="{{passenger.tokenId}}">
+          <img src="{{passenger.data.img}}" title="{{passenger.data.name}}" />
+          <h3>{{passenger.data.name}}</h3>
+          <a class="passenger-control" data-action="delete"><i class="fas fa-door-open"></i></a>
+        </li>
+        {{/each}}
+      </ol>
+    </div>
+  </div>
+  {{> "systems/fs2e/templates/partials/wound-points.hbs" type=actor.type rowSize=30}}
+</form>

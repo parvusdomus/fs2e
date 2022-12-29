@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "Baron Neue";
+  src: url("fonts/Baron Neue.otf");
+}
+@font-face {
+  font-family: "Baron Neue";
+  src: url("fonts/Baron Neue Bold.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Baron Neue";
+  src: url("fonts/Baron Neue Italic.otf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Baron Neue";
+  src: url("fonts/Baron Neue Bold Italic.otf");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Gotham Book";
+  src: url("fonts/Gotham Book Regular.otf");
+}
+@font-face {
+  font-family: "Gotham Book";
+  src: url("fonts/Gotham Bold.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Gotham Book";
+  src: url("fonts/Gotham Book Italic.otf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Gotham Book";
+  src: url("fonts/Gotham Bold Italic.otf");
+  font-weight: bold;
+  font-style: italic;
+}
+body {
+  font-family: "Gotham Book";
+  text-transform: none;
+  font-weight: normal;
+}
+h1,
+h2 {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+  padding-bottom: 0.5rem;
+  background-color: #9f0300;
+  color: white;
+  border: none;
+  text-align: center;
+}
+h3 {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+  color: #9f0300;
+  font-size: 1.5em;
+}
+h4 {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+  color: #9f0300;
+  font-size: 1.4em;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #9f0300;
+}
+h5 {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+  color: white;
+  background: black;
+  font-size: 1.4em;
+  margin: 0.5em 0;
+  padding-bottom: 0.5rem;
+}
+section.secret {
+  margin: 0.25em;
+  padding: 0.25em;
+  border: none;
+  background: #c5d8ae;
+  clip-path: polygon(4px 0px, calc(100% - 4px) 0px, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 4px 100%, 4px 100%, 0px calc(100% - 4px), 0px 4px);
+  box-shadow: 0 0 4px #000;
+}

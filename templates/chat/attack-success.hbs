@@ -1,0 +1,27 @@
+<div class="fs2e chat-card" data-actor-id="{{defenderId}}">
+  <h2>{{localize "fs2e.chat.attack.summary.title"}}</h2>
+  <p class="smackdown" data-smackdown="{{smackdown}}">
+    {{#if failedDodge}}
+    {{localize "fs2e.chat.attack.dodgeFailed" target=defenderName attacker=attackerName }}
+    {{else}}
+    {{localize "fs2e.chat.attack.summary.smackdown" name=defenderName value=smackdown}}
+    {{/if}}
+  </p>
+  {{#if downed}}
+    <p>{{localize "fs2e.chat.attack.summary.downedCharacter" name=defenderName damage=damage}}</p>
+  {{else}}
+    {{#if canRetroactiveDodge}}
+    <button class="dodge" data-action="Dodge" data-attacker-id="{{attackerId}}" data-defender-id="{{defenderId}}" data-retroactive="true" data-outcome="{{outcome}}">
+      {{localize "fs2e.chat.actions.dodge"}}
+    </button>
+    {{/if}}
+    <button class="smackdown-button" data-action="Smackdown" data-defender-id="{{defenderId}}" data-defender-name="{{defenderName}}" data-smackdown="{{smackdown}}">
+      {{localize "fs2e.chat.actions.applySmackdown"}}
+    </button>
+    {{#if canUseArmor}}
+      <button class="smackdown-button" data-action="Smackdown" data-defender-id="{{defenderId}}" data-defender-name="{{defenderName}}" data-smackdown="{{smackdown}}" data-use-thunk="true">
+        {{localize "fs2e.chat.actions.applySmackdownThunk"}}
+      </button>
+    {{/if}}
+  {{/if}}
+</div>

@@ -1,0 +1,97 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <div class="sidebar">
+    <h1 class="archetype">
+      {{#if (eq actor.type "hero")}}
+      <div data-edit="system.archetype" contenteditable data-archetype="{{actor.system.archetype}}">
+        {{actor.system.archetype}}
+      </div>
+      {{else}}
+      <div data-archetype="{{localize typeString}}">
+        {{localize typeString}}
+      </div>
+      {{/if}}
+    </h1>
+    <div class="actor-img">
+      <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+    </div>
+    <div class="stats-and-weapons">
+      {{> "systems/fs2e/templates/partials/character-stat-block.hbs"}}
+      <section class="weapon-list item-list">
+        {{#each weapons as |weapon id|}}
+        {{> "systems/fs2e/templates/partials/weapon-card.hbs" weapon inSheet=true}}
+        {{/each}}
+      </section>
+    </div>
+    {{#if (eq actor.type "hero")}}
+    <section class="wealth">
+      <h2>{{localize "fs2e.wealth.label"}}</h2>
+      <select name="system.wealth">
+        {{#select actor.system.wealth}}
+        {{#each config.wealthLevels as |name type|}}
+        <option value="{{type}}">{{localize name}}</option>
+        {{/each}}
+        {{/select}}
+      </select>
+    </section>
+    {{/if}}
+    {{#if (ne actor.type "mook")}}
+    <section class="impairment">
+      <h2>{{localize "fs2e.sheet.impairment"}}</h2>
+      <div class="impairment-values">
+        <input name="system.impairment.extra" type="text" value="{{actor.system.impairment.extra}}" data-dtype="Number" />
+
+        <div class="impairment-total"> + {{actor.system.impairment.fromWounds}} = {{actor.system.impairment.total}}</div>
+      </div>
+    </section>
+    {{/if}}
+  </div>
+  <div class="sheet-body">
+    <div class="panelBorder sheet-card">
+      <h2>{{localize "fs2e.sheet.characterName"}}</h2>
+      <input class="actor-name" name="name" type="text" value="{{actor.name}}" placeholder="Name" />
+    </div>
+    <div class="panelBorder sheet-card">
+      <h2>{{localize "fs2e.sheet.concept"}}</h2>
+      <textarea name="system.concept" rows="1">{{actor.system.concept}}</textarea>
+    </div>
+    {{#if (eq actor.type "hero")}}
+    <div class="panelBorder sheet-card">
+      <h2>{{localize "fs2e.sheet.hook"}}</h2>
+      <textarea name="system.hook" rows="1">{{actor.system.hook}}</textarea>
+    </div>
+    {{/if}}
+    {{#if (ne actor.type "mook")}}
+    <div class="shticks-gear-skills-death">
+      <div class="left-side item-list" data-side="0">
+        {{#each evenShticks as |shtick id|}}
+        {{> "systems/fs2e/templates/partials/shtick-card.hbs" shtick config=../config inSheet=true}}
+        {{/each}}
+        <section class="gear panelBorder sheet-card">
+          <h2>{{localize "fs2e.sheet.gear"}}</h2>
+          <div class="item-list">
+            {{#each gear as |item id|}}
+            {{#if (eq item.type "armor")}}
+            {{> "systems/fs2e/templates/partials/armor-card.hbs" item inSheet=true}}
+            {{else if (eq item.type "vehicle")}}
+            {{> "systems/fs2e/templates/partials/vehicle-card.hbs" item inSheet=true}}
+            {{/if}}
+            {{/each}}
+          </div>
+        </section>
+      </div>
+      <div class="right-side item-list" data-side="1">
+        {{#each oddShticks as |shtick id|}}
+        {{> "systems/fs2e/templates/partials/shtick-card.hbs" shtick inSheet=true}}
+        {{/each}}
+        {{> "systems/fs2e/templates/partials/actor-skills.hbs"}}
+        {{#if (eq actor.type "hero")}}
+        {{> "systems/fs2e/templates/partials/death-marks.hbs"}}
+        {{/if}}
+      </div>
+    </div>
+    {{/if}}
+  </div>
+  {{#if (ne actor.type "mook")}}
+  {{> "systems/fs2e/templates/partials/wound-points.hbs" rowSize=30}}
+  {{/if}}
+</form>

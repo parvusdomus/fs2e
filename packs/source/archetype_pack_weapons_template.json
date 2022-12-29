@@ -1,0 +1,12 @@
+{
+  "name": "{{Name}}",
+  "type": "weapon",
+  "img": "systems/fs2e/icons/items/weapon.png",
+  "data": {
+    "damage": {{Damage}},
+    "concealment": {{Conceal}},
+    "reload": {{Reload}},
+    "mookBonus": {{Skulls}},
+    "pumpAction": {{PumpAction}}
+  }
+}

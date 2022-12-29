@@ -1,0 +1,32 @@
+{
+  "name": "{{Name}}",
+  "type": "hero",
+  "img": "systems/fs2e/icons/actors/{{Archetype}}.png",
+  "data": {
+    "attackPrimary": {
+      "name": "{{PrimaryAttackName}}",
+      "value": {{PrimaryAttackValue}}
+    },
+    "attackBackup": {
+      "name": "{{SecondaryAttackName}}",
+      "value": {{SecondaryAttackValue}}
+    },
+    "defense": {{Defense}},
+    "toughness": {{Toughness}},
+    "fortune": {
+      "name": "{{FortuneName}}",
+      "value": {{FortuneValue}}
+    },
+    "speed": {{Speed}},
+    "archetype": "{{Archetype}}",
+    "wealth": "{{wealth}}",
+    "wounds": {
+      "value": 0,
+      "max": 60
+    },
+    "impairment": {
+      "threshold": {{Impairment}}
+    },
+    "deathMarks": 0
+  }
+}

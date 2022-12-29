@@ -1,0 +1,34 @@
+<div class="dice-roll fs2e task-check chat-card" data-actor-id="{{actorID}}">
+  <h2 class="title">
+    <div class="check-type">{{localize "fs2e.chat.taskCheck.title" type=type}}</div>
+    {{#if difficulty}}
+    <div class="difficulty">{{localize "fs2e.chat.taskCheck.difficulty" diff=difficulty}}</div>
+    {{/if}}
+  </h2>
+  {{#if weapon}}
+  {{> "systems/fs2e/templates/partials/weapon-card.hbs" weapon}}
+  {{/if}}
+  <div class="roll-summary">
+    <div class="dice-formula">{{roll.formula}}</div>
+    {{{tooltip}}}
+    <h4 class="dice-total swerve" data-swerve="{{swerve}}">
+      {{localize "fs2e.chat.taskCheck.swerve" swerve=swerve}}
+    </h4>
+    <h4 class="dice-total action-result" data-action-result="{{roll.total}}">
+      {{localize "fs2e.chat.taskCheck.actionResult" result=roll.total}}
+    </h4>
+    {{#if difficulty}}
+    <h4 class="dice-total outcome" data-outcome="{{outcome}}">
+      {{localize "fs2e.chat.taskCheck.outcome" outcome=outcome}}
+    </h4>
+    {{/if}}
+  </div>
+  {{#if isAttack}}
+  <div class="attack-actions">
+    <button class="attack-resolve" data-action="ResolveAttack" data-attacker-uuid="{{actorID}}"
+      data-weapon="{{weaponID}}" data-roll="{{roll.total}}">
+      {{localize "fs2e.chat.actions.resolveAttack"}}
+    </button>
+  </div>
+  {{/if}}
+</div>

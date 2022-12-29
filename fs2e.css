@@ -1,0 +1,2493 @@
+@font-face {
+  font-family: "Baron Neue";
+  src: url("fonts/Baron Neue.otf");
+}
+@font-face {
+  font-family: "Baron Neue";
+  src: url("fonts/Baron Neue Bold.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Baron Neue";
+  src: url("fonts/Baron Neue Italic.otf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Baron Neue";
+  src: url("fonts/Baron Neue Bold Italic.otf");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Gotham Book";
+  src: url("fonts/Gotham Book Regular.otf");
+}
+@font-face {
+  font-family: "Gotham Book";
+  src: url("fonts/Gotham Bold.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Gotham Book";
+  src: url("fonts/Gotham Book Italic.otf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Gotham Book";
+  src: url("fonts/Gotham Bold Italic.otf");
+  font-weight: bold;
+  font-style: italic;
+}
+.fs2e.sheet.item {
+  min-width: min-content;
+  min-height: max-content;
+}
+.fs2e.sheet.item form {
+  display: flex;
+  flex-direction: column;
+}
+.fs2e.sheet.item .sheet-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+.fs2e.sheet.item .sheet-content .tox-tinymce {
+  height: 100% !important;
+}
+.fs2e.sheet.item .sheet-header {
+  margin-bottom: 0.5em;
+}
+.fs2e.sheet.item .description {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.fs2e.sheet.item .description .editor {
+  flex: 1;
+}
+.fs2e.sheet.item .item-stats {
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  padding: 0.25em;
+  gap: 0.1em;
+}
+.fs2e.sheet.item .item-stats .item-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+.fs2e.sheet.item .item-stats .item-stat select,
+.fs2e.sheet.item .item-stats .item-stat input {
+  font-size: 1.25em;
+}
+.fs2e.sheet.item .item-stats .item-stat label {
+  flex-grow: 1;
+  vertical-align: middle;
+  text-align: center;
+}
+.fs2e.sheet.item .effects-list ol {
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+.fs2e.sheet.item .effects-list li {
+  padding-left: 8px;
+}
+.fs2e.sheet.item .effects-list .effect {
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+}
+.fs2e.sheet.item .effects-list .effect-name {
+  flex: 1;
+}
+.fs2e.sheet.item .effects-list .effect-controls {
+  flex: 0 0 48px;
+}
+.fs2e.sheet.item .img-wrapper {
+  position: relative;
+  border: none;
+  background: white;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+  flex: 0 0 70px;
+  padding: 0.1em;
+  margin-left: 1em;
+}
+.fs2e.sheet.item .img-wrapper::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(4px + 8px) calc(100% - 4px), 4px calc(100% - 4px - 8px), 4px calc(4px + 8px), calc(4px + 8px) 4px, calc(100% - 4px - 8px) 4px, calc(100% - 4px) calc(4px + 8px), calc(100% - 4px) calc(100% - 4px - 8px), calc(100% - 4px - 8px) calc(100% - 4px), calc(4px + 8px) calc(100% - 4px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #9f0300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.fs2e.sheet.item .img-wrapper img {
+  border: none;
+}
+.fs2e.sheet.namedCharacter .stat-block {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-align-last: center;
+  align-items: center;
+  position: relative;
+}
+.fs2e.sheet.namedCharacter .stat-block .stat-name {
+  padding-bottom: 0.25em;
+}
+.fs2e.sheet.namedCharacter .stat-block .stat-value {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.fs2e.sheet.namedCharacter .stat-block .stat-value input {
+  margin-top: 0.25em;
+}
+.fs2e.sheet.namedCharacter .stat-block .task-check {
+  position: absolute;
+  padding: 0.35em;
+}
+.fs2e.sheet.namedCharacter .stat-block .stat-name,
+.fs2e.sheet.namedCharacter .stat-block .stat-value {
+  width: 100%;
+}
+.fs2e.sheet.namedCharacter .stat-block .stat-name > select {
+  width: 100%;
+}
+.fs2e.sheet.namedCharacter .stat-block select {
+  font-size: 1em;
+  padding-bottom: 0;
+}
+.fs2e.sheet.namedCharacter .stat-block input {
+  border: none;
+  margin-bottom: 0.25em;
+}
+.fs2e.sheet .hidden {
+  display: none;
+}
+.fs2e.sheet .panelBorder:first-child {
+  margin-top: 0em;
+}
+.fs2e.sheet .panelBorder h2 {
+  margin-top: 10px;
+}
+.fs2e.sheet .panelBorder h2,
+.fs2e.sheet .panelBorder h3,
+.fs2e.sheet .panelBorder th,
+.fs2e.sheet .panelBorder td,
+.fs2e.sheet .panelBorder textarea,
+.fs2e.sheet .panelBorder p {
+  padding: 0 0.75em 0.25em;
+}
+.fs2e.sheet .sidebar {
+  gap: 0.5em;
+}
+.fs2e.sheet .archetype {
+  margin-bottom: 0;
+}
+.fs2e.sheet .impairment-values {
+  display: flex;
+  flex-flow: row;
+  gap: 0.25em;
+  padding: 0 8px 4px;
+}
+.fs2e.sheet .impairment-values .impairment-total {
+  flex-grow: 1;
+}
+.fs2e.sheet.namedCharacter textarea {
+  resize: none;
+}
+.fs2e.sheet.namedCharacter form {
+  display: grid;
+  grid-template-columns: auto 250px;
+  grid-template-rows: auto minmax(min-content, max-content);
+  row-gap: 0.5em;
+}
+.fs2e.sheet.namedCharacter .sheet-body,
+.fs2e.sheet.namedCharacter .left-side,
+.fs2e.sheet.namedCharacter .right-side {
+  gap: 0.75em;
+}
+.fs2e.sheet.namedCharacter .sidebar {
+  grid-column-start: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.fs2e.sheet.namedCharacter .sidebar .actor-img,
+.fs2e.sheet.namedCharacter .sidebar .wealth,
+.fs2e.sheet.namedCharacter .sidebar .impairment {
+  width: 80%;
+}
+.fs2e.sheet.namedCharacter .sidebar .archetype {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.fs2e.sheet.namedCharacter .sidebar .stat-block {
+  margin-bottom: 0.75rem;
+}
+.fs2e.sheet.namedCharacter .sidebar .stats-and-weapons {
+  padding: 0.5em;
+  height: 100%;
+}
+.fs2e.sheet.namedCharacter .sidebar .wealth > select {
+  padding: 0 0.75em 0.25em;
+}
+.fs2e.sheet.namedCharacter .sidebar .weapon-list {
+  margin-bottom: 0.5em;
+}
+.fs2e.sheet.namedCharacter .actor-name {
+  padding: 0 0.75rem 0;
+  margin-bottom: 0.5em;
+  height: 1.2em;
+}
+.fs2e.sheet.namedCharacter .sheet-body {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  display: flex;
+  flex-direction: column;
+}
+.fs2e.sheet.namedCharacter .shticks-gear-skills-death {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+.fs2e.sheet.namedCharacter .shticks-gear-skills-death .left-side,
+.fs2e.sheet.namedCharacter .shticks-gear-skills-death .right-side {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.fs2e.sheet.namedCharacter .shticks-gear-skills-death .gear {
+  height: 100%;
+}
+.fs2e.sheet.namedCharacter .shticks-gear-skills-death .skills {
+  height: 100%;
+}
+.fs2e.sheet.namedCharacter .wound-points {
+  grid-row-start: 2;
+  grid-column-end: span 2;
+}
+.fs2e.sheet.namedCharacter .actor-img > img {
+  width: 256px;
+}
+.fs2e.sheet.namedCharacter input {
+  width: 100%;
+}
+.fs2e.sheet.namedCharacter select {
+  border: none;
+  text-align: center;
+}
+.fs2e.sheet.namedCharacter .wealth,
+.fs2e.sheet.namedCharacter .impairment {
+  text-align: center;
+  text-align-last: center;
+  width: 100%;
+}
+.fs2e.sheet .wound-points {
+  height: fit-content;
+  padding: 0.25em;
+  display: flex;
+}
+.fs2e.sheet .wound-points .wounds-header {
+  height: 80px;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  margin-right: 0.5em;
+}
+.fs2e.sheet .wound-points .impairment-editor {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  align-content: stretch;
+}
+.fs2e.sheet .wound-points .impairment-editor input {
+  height: 100%;
+  background-color: burlywood;
+  text-align: center;
+}
+.fs2e.sheet .wound-points .hidden {
+  display: none;
+}
+.fs2e.sheet .wound-points .wounds {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.fs2e.sheet .wound-points .wounds .wound-markers {
+  display: grid;
+  grid-template-columns: repeat(var(--row-length, 30), 1fr);
+  grid-template-rows: auto auto;
+  width: fit-content;
+  text-align: center;
+  height: 100%;
+}
+.fs2e.sheet .wound-points .wound-point {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.fs2e.sheet .wound-points .wound-point.bottom-row {
+  flex-direction: column-reverse;
+}
+.fs2e.sheet .wound-points .wound-point .impairment {
+  width: fit-content;
+}
+.fs2e.sheet .wound-points .wound-box {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.fs2e.sheet .wound-points .wound-box.crossed div:after {
+  position: absolute;
+  content: '';
+  background: #9f0300;
+  width: 100%;
+  height: 5px;
+  transform: rotate(-45deg);
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.death-marks h2 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 0 0.75em 0.25em;
+}
+.death-marks h2 div {
+  width: 100%;
+}
+.death-marks h2 i {
+  position: absolute;
+  right: 0.5em;
+  top: 0.15em;
+}
+.death-marks .death-icons {
+  display: flex;
+  justify-content: space-between;
+}
+.death-marks .death-icons img {
+  padding: 0.75em;
+  border: none;
+}
+.death-marks .death-icons .mark-container {
+  position: relative;
+}
+.death-marks .death-icons .crossed:after {
+  position: absolute;
+  content: '';
+  background: #9f0300;
+  width: 100%;
+  height: 5px;
+  transform: rotate(-45deg);
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.fs2e.sheet .skills {
+  display: flex;
+  flex-direction: column;
+}
+.fs2e.sheet .skills h2 {
+  display: flex;
+  flex-direction: row;
+}
+.fs2e.sheet .skills h2 .item-create {
+  margin-left: auto;
+}
+.fs2e.sheet .skills .skill-item {
+  display: flex;
+  flex-direction: row;
+  margin: 0.25em 0.5em;
+}
+.fs2e.sheet .skills .skill-item .skill-value {
+  width: 3ch;
+}
+.fs2e.sheet .skills .unskilled-check {
+  margin-top: auto;
+  margin-bottom: 0.7em;
+  padding: 0 0.75em 0.25em;
+}
+.weapon-card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  align-content: stretch;
+}
+.weapon-card .weapon-info {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.weapon-card .weapon-name {
+  width: 70%;
+}
+.weapon-card .weapon-stats {
+  width: 30%;
+  flex-direction: column;
+}
+.weapon-card .weapon-effects {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.weapon-card .weapon-effects img {
+  border: none;
+  padding: 0 0.1em;
+}
+.chat-card.weapon {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+.shtick-border .shtick-icon {
+  border: none;
+  width: 3.5em;
+  float: right;
+}
+.shtick-border .shtick-cost {
+  font-size: 2em;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: fit-content;
+}
+.shtick-border .shtick-cost div {
+  width: fit-content;
+  text-align: center;
+  padding: 0.3em 0.75em 0.5em;
+}
+.shtick-border .shtick-name {
+  margin-top: 0.7em;
+  padding: 0 0.75em 0.25em;
+  height: 26px;
+}
+.shtick-border .shtick-description {
+  margin: 0.5em 1em 0.75em;
+}
+.message-content {
+  display: flex;
+  flex-direction: column;
+}
+.gear-item h3 {
+  margin-bottom: 0;
+}
+.gear-item table {
+  margin-top: 0;
+}
+.fs2e.dice-roll {
+  display: flex;
+  flex-direction: column;
+}
+.fs2e.dice-roll .way-awful {
+  color: #9f0300;
+  position: relative;
+  border: none;
+  background: white;
+  clip-path: polygon(4px 0px, calc(100% - 4px) 0px, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 4px 100%, 4px 100%, 0px calc(100% - 4px), 0px 4px);
+}
+.fs2e.dice-roll .way-awful::after {
+  clip-path: polygon(calc(100% - 4px) 0%, 4px 0%, 0% 4px, 0% calc(100% - 4px), 4px 100%, calc(2px + 4px) calc(100% - 2px), 2px calc(100% - 2px - 4px), 2px calc(2px + 4px), calc(2px + 4px) 2px, calc(100% - 2px - 4px) 2px, calc(100% - 2px) calc(2px + 4px), calc(100% - 2px) calc(100% - 2px - 4px), calc(100% - 2px - 4px) calc(100% - 2px), calc(2px + 4px) calc(100% - 2px), 4px 100%, calc(100% - 4px) 100%, 100% calc(100% - 4px), 100% 4px);
+  content: "";
+  background: #9f0300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.fs2e.dice-roll .boxcars {
+  color: green;
+}
+.fs2e.sheet.vehicle .vehicleCharacteristics {
+  padding: 0 0.5em;
+}
+.fs2e.sheet.vehicle .passengers {
+  height: 100%;
+}
+.fs2e.sheet.vehicle .passengers-header {
+  display: flex;
+  flex-direction: row;
+}
+.fs2e.sheet.vehicle .passengers-header > div {
+  flex: 1;
+}
+.fs2e.sheet.vehicle .passenger-list {
+  list-style-type: none;
+}
+.fs2e.sheet.vehicle .passenger {
+  display: flex;
+  flex-direction: row;
+}
+.fs2e.sheet.vehicle .passenger img {
+  height: 72px;
+}
+.fs2e.token-picker {
+  width: fit-content;
+  height: fit-content;
+}
+.fs2e.token-picker .token-list {
+  list-style: none;
+}
+.fs2e.token-picker .passenger-token {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0.5em;
+}
+.fs2e.token-picker .passenger-token img {
+  height: 64px;
+}
+:root {
+  --macro-size: 51.1px;
+}
+body {
+  font-family: "Gotham Book";
+  text-transform: none;
+  font-weight: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+}
+#navigation {
+  filter: drop-shadow(0 0 10px black);
+}
+#navigation #nav-toggle {
+  border: none;
+  background-color: #9f0300;
+  color: white;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+#navigation #scene-list .scene {
+  background: none;
+  border: none;
+  padding: 0;
+}
+#navigation #scene-list .scene .scene-name {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+  padding: 10px 8px;
+  background-color: #9f0300;
+  position: relative;
+  border: none;
+  background: white;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+  color: black;
+}
+#navigation #scene-list .scene .scene-name::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #9f0300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#navigation #scene-list .scene.gm .scene-name {
+  position: relative;
+  border: none;
+  background: #cec6d0;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+#navigation #scene-list .scene.gm .scene-name::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #5d4363;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#navigation #scene-list .scene.view .scene-name {
+  background-color: #9f0300;
+  color: white;
+}
+#navigation #scene-list .scene.gm,
+#navigation #scene-list .scene.view,
+#navigation #scene-list .scene.context {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+#navigation #scene-list .scene ul.scene-players {
+  left: 8px;
+}
+#context-menu {
+  border: none;
+  width: max-content;
+  min-width: 100%;
+  background-color: #9f0300;
+  color: white;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+  filter: drop-shadow(0 0 10px black);
+}
+#context-menu li.context-item:hover {
+  background-color: white;
+  color: black;
+  text-shadow: none;
+}
+#controls ol {
+  filter: drop-shadow(0 0 10px black);
+}
+#controls ol .scene-control,
+#controls ol.sub-controls,
+#controls ol .scene-control .control-tool,
+#controls ol.sub-controls .control-tool {
+  border: none;
+  background: none;
+  box-shadow: none;
+  color: black;
+}
+#controls ol .scene-control > i,
+#controls ol.sub-controls > i,
+#controls ol .scene-control .control-tool > i,
+#controls ol.sub-controls .control-tool > i {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  position: relative;
+  border: none;
+  background: white;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+#controls ol .scene-control > i::after,
+#controls ol.sub-controls > i::after,
+#controls ol .scene-control .control-tool > i::after,
+#controls ol.sub-controls .control-tool > i::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #9f0300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#controls ol .scene-control .control-tool.toggle,
+#controls ol.sub-controls .control-tool.toggle {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border: none;
+  background: white;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+#controls ol .scene-control .control-tool.toggle::after,
+#controls ol.sub-controls .control-tool.toggle::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(4px + 8px) calc(100% - 4px), 4px calc(100% - 4px - 8px), 4px calc(4px + 8px), calc(4px + 8px) 4px, calc(100% - 4px - 8px) 4px, calc(100% - 4px) calc(4px + 8px), calc(100% - 4px) calc(100% - 4px - 8px), calc(100% - 4px - 8px) calc(100% - 4px), calc(4px + 8px) calc(100% - 4px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #5d4363;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#controls ol .scene-control.active,
+#controls ol.sub-controls.active,
+#controls ol .scene-control .control-tool.active,
+#controls ol.sub-controls .control-tool.active,
+#controls ol .scene-control:hover,
+#controls ol.sub-controls:hover {
+  box-shadow: none;
+  border: none;
+}
+#controls ol .scene-control.active > i,
+#controls ol.sub-controls.active > i,
+#controls ol .scene-control .control-tool.active > i,
+#controls ol.sub-controls .control-tool.active > i,
+#controls ol .scene-control:hover > i,
+#controls ol.sub-controls:hover > i {
+  background-color: #9f0300;
+  color: white;
+}
+#players {
+  background: none;
+  border: none;
+  color: black;
+  box-shadow: none;
+  filter: drop-shadow(0 0 10px black);
+}
+#players h3 {
+  background-color: #9f0300;
+  color: white;
+  margin: 0;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% 100%, 0px 100%, 0px 100%, 0px 100%, 0px 8px);
+}
+#players #player-list {
+  background: white;
+}
+#players #player-list .player-name.self {
+  color: #9f0300;
+}
+#hotbar {
+  margin-left: 0.5rem;
+  filter: drop-shadow(0 0 10px black);
+}
+#hotbar .bar-controls {
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  border-radius: 0px;
+  background-color: #9f0300;
+  color: white;
+}
+#hotbar #hotbar-directory-controls {
+  clip-path: polygon(8px 0px, 100% 0px, 100% 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+#hotbar #hotbar-page-controls {
+  clip-path: polygon(0px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0px 100%);
+}
+#hotbar #macro-list {
+  margin: 0;
+  border-radius: 0px;
+  border-color: #9f0300;
+  background: #9f0300;
+}
+#hotbar .macro {
+  border-color: #9f0300;
+  background: rgba(255, 255, 255, 0.8);
+}
+#hotbar .macro.active,
+#hotbar .macro.inactive {
+  box-shadow: none;
+}
+#hotbar .macro.active:hover,
+#hotbar .macro.inactive:hover {
+  box-shadow: 0 0 50px #000 inset;
+}
+#hotbar .macro .macro-key {
+  background-color: #9f0300;
+  color: white;
+  clip-path: polygon(4px 0px, calc(100% - 4px) 0px, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 4px 100%, 4px 100%, 0px calc(100% - 4px), 0px 4px);
+}
+#hotbar .macro .tooltip {
+  border: none;
+  height: auto;
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+  background-color: #9f0300;
+  color: white;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+#hud {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+}
+.placeable-hud {
+  filter: drop-shadow(0 0 10px black);
+}
+.placeable-hud input[type="text"] {
+  border-radius: none;
+  box-shadow: none;
+  border: none;
+  padding-bottom: 0.25em;
+}
+.placeable-hud .control-icon {
+  border: none;
+  padding: 4px;
+  padding-bottom: 0.25em;
+}
+.placeable-hud .control-icon.active {
+  border: none;
+  background-color: #9f0300;
+}
+#token-hud .attribute {
+  border: none;
+}
+#token-hud .attribute.bar1 input,
+#token-hud .attribute.bar2 input {
+  border: none;
+}
+#token-hud .attribute.bar1 {
+  position: relative;
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+#token-hud .attribute.bar1::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(1px + 8px) calc(100% - 1px), 1px calc(100% - 1px - 8px), 1px calc(1px + 8px), calc(1px + 8px) 1px, calc(100% - 1px - 8px) 1px, calc(100% - 1px) calc(1px + 8px), calc(100% - 1px) calc(100% - 1px - 8px), calc(100% - 1px - 8px) calc(100% - 1px), calc(1px + 8px) calc(100% - 1px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #7cd000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#token-hud .attribute.bar2 {
+  position: relative;
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+#token-hud .attribute.bar2::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(1px + 8px) calc(100% - 1px), 1px calc(100% - 1px - 8px), 1px calc(1px + 8px), calc(1px + 8px) 1px, calc(100% - 1px - 8px) 1px, calc(100% - 1px) calc(1px + 8px), calc(100% - 1px) calc(100% - 1px - 8px), calc(100% - 1px - 8px) calc(100% - 1px), calc(1px + 8px) calc(100% - 1px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #659db5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#menu {
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+  filter: drop-shadow(0 0 10px black);
+}
+#menu #menu-items {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 8px;
+  clip-path: polygon(15px 0px, calc(100% - 15px) 0px, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 15px 100%, 15px 100%, 0px calc(100% - 15px), 0px 15px);
+}
+#menu #menu-items li h4 {
+  font-size: 28px;
+}
+.app:not(#navigation, #players, .control-tools) {
+  background-color: #9f0300;
+  color: white;
+  position: relative;
+  border: none;
+  background: white;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+  padding: 12px 0px;
+}
+.app:not(#navigation, #players, .control-tools)::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(4px + 8px) calc(100% - 4px), 4px calc(100% - 4px - 8px), 4px calc(4px + 8px), calc(4px + 8px) 4px, calc(100% - 4px - 8px) 4px, calc(100% - 4px) calc(4px + 8px), calc(100% - 4px) calc(100% - 4px - 8px), calc(100% - 4px - 8px) calc(100% - 4px), calc(4px + 8px) calc(100% - 4px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #9f0300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.app:not(#navigation, #players, .control-tools):not(#sidebar) {
+  position: fixed;
+}
+.window-app .window-header {
+  background-color: #9f0300;
+  color: white;
+  border: none;
+}
+.window-app .window-content {
+  background-image: unset;
+}
+#sidebar-tabs {
+  border: none;
+  box-shadow: none;
+  background-color: #9f0300;
+  color: white;
+}
+#sidebar-tabs > .collapse {
+  color: white;
+}
+#sidebar.collapsed {
+  padding: 0;
+  clip-path: none;
+  clip-path: polygon(6px 0px, calc(100% - 6px) 0px, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 6px 100%, 6px 100%, 0px calc(100% - 6px), 0px 6px);
+}
+#sidebar.collapsed::before {
+  content: none;
+}
+#sidebar.collapsed::after {
+  content: none;
+}
+input {
+  background: rgba(0, 0, 0, 0.05);
+  color: black;
+  border: none;
+  border-radius: 0;
+}
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="password"],
+input[type="file"] {
+  border: none;
+  clip-path: polygon(6px 0px, calc(100% - 6px) 0px, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 6px 100%, 6px 100%, 0px calc(100% - 6px), 0px 6px);
+  padding: 0px 8px;
+}
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="password"]:focus,
+input[type="file"]:focus {
+  border: none;
+  box-shadow: 0 0 4px #000 inset;
+}
+input::-webkit-file-upload-button {
+  border: none;
+  background-color: #9f0300;
+  color: white;
+  clip-path: polygon(4px 0px, calc(100% - 4px) 0px, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 4px 100%, 4px 100%, 0px calc(100% - 4px), 0px 4px);
+  margin: 2px 0px;
+  margin-right: 2px;
+}
+input[type="checkbox"] {
+  position: relative;
+  border: none;
+  background: white;
+  clip-path: polygon(25% 0px, calc(100% - 25%) 0px, 100% 25%, 100% calc(100% - 25%), calc(100% - 25%) 100%, 25% 100%, 25% 100%, 25% 100%, 0px calc(100% - 25%), 0px 25%);
+}
+input[type="checkbox"]::after {
+  clip-path: polygon(calc(100% - 25%) 0%, 25% 0%, 0% 25%, 0% calc(100% - 25%), 25% 100%, calc(1px + 25%) calc(100% - 1px), 1px calc(100% - 1px - 25%), 1px calc(1px + 25%), calc(1px + 25%) 1px, calc(100% - 1px - 25%) 1px, calc(100% - 1px) calc(1px + 25%), calc(100% - 1px) calc(100% - 1px - 25%), calc(100% - 1px - 25%) calc(100% - 1px), calc(1px + 25%) calc(100% - 1px), 25% 100%, calc(100% - 25%) 100%, 100% calc(100% - 25%), 100% 25%);
+  content: "";
+  background: #9f0300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+input[type="checkbox"]:checked {
+  appearance: none;
+  background: #9f0300;
+  filter: none;
+}
+input[type="checkbox"]:checked::before {
+  content: 'X';
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+  font-size: 1.25em;
+  color: white;
+  text-align: center;
+  display: block;
+}
+input[type="checkbox"]:disabled {
+  position: relative;
+  border: none;
+  background: #dadada;
+  clip-path: polygon(25% 0px, calc(100% - 25%) 0px, 100% 25%, 100% calc(100% - 25%), calc(100% - 25%) 100%, 25% 100%, 25% 100%, 25% 100%, 0px calc(100% - 25%), 0px 25%);
+}
+input[type="checkbox"]:disabled::after {
+  clip-path: polygon(calc(100% - 25%) 0%, 25% 0%, 0% 25%, 0% calc(100% - 25%), 25% 100%, calc(1px + 25%) calc(100% - 1px), 1px calc(100% - 1px - 25%), 1px calc(1px + 25%), calc(1px + 25%) 1px, calc(100% - 1px - 25%) 1px, calc(100% - 1px) calc(1px + 25%), calc(100% - 1px) calc(100% - 1px - 25%), calc(100% - 1px - 25%) calc(100% - 1px), calc(1px + 25%) calc(100% - 1px), 25% 100%, calc(100% - 25%) 100%, 100% calc(100% - 25%), 100% 25%);
+  content: "";
+  background: #dadada;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+input[type="range"]::-webkit-slider-thumb {
+  background: #9f0300;
+  border: none;
+  clip-path: polygon(2px 0px, calc(100% - 2px) 0px, 100% 2px, 100% calc(100% - 2px), calc(100% - 2px) 100%, 2px 100%, 2px 100%, 2px 100%, 0px calc(100% - 2px), 0px 2px);
+}
+input[type="range"]::-webkit-slider-thumb:disabled {
+  background: #dadada;
+}
+input[type="range"] + .range-value {
+  position: relative;
+  border: none;
+  background: white;
+  clip-path: polygon(4px 0px, calc(100% - 4px) 0px, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 4px 100%, 4px 100%, 0px calc(100% - 4px), 0px 4px);
+}
+input[type="range"] + .range-value::after {
+  clip-path: polygon(calc(100% - 4px) 0%, 4px 0%, 0% 4px, 0% calc(100% - 4px), 4px 100%, calc(1px + 4px) calc(100% - 1px), 1px calc(100% - 1px - 4px), 1px calc(1px + 4px), calc(1px + 4px) 1px, calc(100% - 1px - 4px) 1px, calc(100% - 1px) calc(1px + 4px), calc(100% - 1px) calc(100% - 1px - 4px), calc(100% - 1px - 4px) calc(100% - 1px), calc(1px + 4px) calc(100% - 1px), 4px 100%, calc(100% - 4px) 100%, 100% calc(100% - 4px), 100% 4px);
+  content: "";
+  background: #9f0300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+button {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+  position: relative;
+  border: none;
+  background: white;
+  clip-path: polygon(4px 0px, calc(100% - 4px) 0px, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 4px 100%, 4px 100%, 0px calc(100% - 4px), 0px 4px);
+  font-size: 0.9em;
+}
+button::after {
+  clip-path: polygon(calc(100% - 4px) 0%, 4px 0%, 0% 4px, 0% calc(100% - 4px), 4px 100%, calc(2px + 4px) calc(100% - 2px), 2px calc(100% - 2px - 4px), 2px calc(2px + 4px), calc(2px + 4px) 2px, calc(100% - 2px - 4px) 2px, calc(100% - 2px) calc(2px + 4px), calc(100% - 2px) calc(100% - 2px - 4px), calc(100% - 2px - 4px) calc(100% - 2px), calc(2px + 4px) calc(100% - 2px), 4px 100%, calc(100% - 4px) 100%, 100% calc(100% - 4px), 100% 4px);
+  content: "";
+  background: #9f0300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+button:hover:not(:disabled) {
+  background-color: #9f0300;
+  color: white;
+}
+button:disabled {
+  position: relative;
+  border: none;
+  background: #dadada;
+  clip-path: polygon(4px 0px, calc(100% - 4px) 0px, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 4px 100%, 4px 100%, 0px calc(100% - 4px), 0px 4px);
+}
+button:disabled::after {
+  clip-path: polygon(calc(100% - 4px) 0%, 4px 0%, 0% 4px, 0% calc(100% - 4px), 4px 100%, calc(2px + 4px) calc(100% - 2px), 2px calc(100% - 2px - 4px), 2px calc(2px + 4px), calc(2px + 4px) 2px, calc(100% - 2px - 4px) 2px, calc(100% - 2px) calc(2px + 4px), calc(100% - 2px) calc(100% - 2px - 4px), calc(100% - 2px - 4px) calc(100% - 2px), calc(2px + 4px) calc(100% - 2px), 4px 100%, calc(100% - 4px) 100%, 100% calc(100% - 4px), 100% 4px);
+  content: "";
+  background: #dadada;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+select {
+  border: none;
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+  background: rgba(0, 0, 0, 0.05);
+  color: black;
+  clip-path: polygon(6px 0px, calc(100% - 6px) 0px, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 6px 100%, 6px 100%, 0px calc(100% - 6px), 0px 6px);
+}
+select:focus {
+  border: none;
+  box-shadow: none;
+}
+textarea {
+  border: none;
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.05);
+  clip-path: polygon(100% 0px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 0px);
+}
+textarea:focus {
+  box-shadow: 0 0 4px #000 inset;
+}
+.tox.tox-tinymce {
+  background: #9f0300;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+  padding: 2px;
+}
+.tox.tox-tinymce .tox-edit-area__iframe {
+  background: rgba(255, 255, 255, 0.9);
+  clip-path: polygon(100% 0px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 0px);
+}
+.tox .tox-toolbar__primary {
+  background: #9f0300 !important;
+}
+.tox .tox-tbtn {
+  background: white !important;
+}
+.tox .tox-toolbar__group {
+  gap: 0.25em !important;
+}
+.editor-content body {
+  font-family: "Gotham Book";
+  text-transform: none;
+  font-weight: normal;
+}
+.editor-content h1,
+.editor-content h2 {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+  padding-bottom: 0.5rem;
+  background-color: #9f0300;
+  color: white;
+  border: none;
+  text-align: center;
+}
+.editor-content h3 {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+  color: #9f0300;
+  font-size: 1.5em;
+}
+.editor-content h4 {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+  color: #9f0300;
+  font-size: 1.4em;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #9f0300;
+}
+.editor-content h5 {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+  color: white;
+  background: black;
+  font-size: 1.4em;
+  margin: 0.5em 0;
+  padding-bottom: 0.5rem;
+}
+.editor-content section.secret {
+  margin: 0.25em;
+  padding: 0.25em;
+  border: none;
+  background: #c5d8ae;
+  clip-path: polygon(4px 0px, calc(100% - 4px) 0px, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 4px 100%, 4px 100%, 0px calc(100% - 4px), 0px 4px);
+  box-shadow: 0 0 4px #000;
+}
+form button {
+  border: none;
+  background: none;
+}
+form label {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+}
+form .notes {
+  padding: 0px 4px;
+}
+form h3.form-header {
+  border: none;
+  background-color: #9f0300;
+  color: white;
+  clip-path: polygon(4px 0px, calc(100% - 4px) 0px, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 4px 100%, 4px 100%, 0px calc(100% - 4px), 0px 4px);
+}
+.dialog .dialog-buttons button {
+  border: none;
+  background: unset;
+}
+.dialog .dialog-buttons button.default {
+  border: none;
+  background: unset;
+}
+.dialog .dialog-buttons button:hover {
+  background: #9f0300;
+}
+#client-settings nav.tabs,
+#av-config .sheet-tabs,
+.sheet .sheet-tabs,
+.tabs {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+  font-size: 12px;
+  color: #9f0300;
+  border-bottom-color: #9f0300;
+}
+#client-settings nav.tabs .item.active,
+#av-config .sheet-tabs .item.active,
+.sheet .sheet-tabs .item.active,
+.tabs .item.active {
+  background-color: #9f0300;
+  color: white;
+  text-shadow: unset;
+}
+.filepicker .current-dir button {
+  border: none;
+  background: unset;
+}
+.filepicker .current-dir button:hover {
+  background: #9f0300;
+}
+.filepicker .display-modes a {
+  position: relative;
+  border: none;
+  background: white;
+  clip-path: polygon(4px 0px, calc(100% - 4px) 0px, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 4px 100%, 4px 100%, 0px calc(100% - 4px), 0px 4px);
+}
+.filepicker .display-modes a::after {
+  clip-path: polygon(calc(100% - 4px) 0%, 4px 0%, 0% 4px, 0% calc(100% - 4px), 4px 100%, calc(1px + 4px) calc(100% - 1px), 1px calc(100% - 1px - 4px), 1px calc(1px + 4px), calc(1px + 4px) 1px, calc(100% - 1px - 4px) 1px, calc(100% - 1px) calc(1px + 4px), calc(100% - 1px) calc(100% - 1px - 4px), calc(100% - 1px - 4px) calc(100% - 1px), calc(1px + 4px) calc(100% - 1px), 4px 100%, calc(100% - 4px) 100%, 100% calc(100% - 4px), 100% 4px);
+  content: "";
+  background: #9f0300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.filepicker .display-modes a.active {
+  border: none;
+  background-color: #9f0300;
+  color: white;
+}
+.filepicker .directory {
+  position: relative;
+  border: none;
+  background: white;
+  clip-path: polygon(4px 0px, calc(100% - 4px) 0px, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 4px 100%, 4px 100%, 0px calc(100% - 4px), 0px 4px);
+  background: #9f0300;
+}
+.filepicker .directory::after {
+  clip-path: polygon(calc(100% - 4px) 0%, 4px 0%, 0% 4px, 0% calc(100% - 4px), 4px 100%, calc(1px + 4px) calc(100% - 1px), 1px calc(100% - 1px - 4px), 1px calc(1px + 4px), calc(1px + 4px) 1px, calc(100% - 1px - 4px) 1px, calc(100% - 1px) calc(1px + 4px), calc(100% - 1px) calc(100% - 1px - 4px), calc(100% - 1px - 4px) calc(100% - 1px), calc(1px + 4px) calc(100% - 1px), 4px 100%, calc(100% - 4px) 100%, 100% calc(100% - 4px), 100% 4px);
+  content: "";
+  background: #9f0300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.filepicker .directory > li {
+  border-color: #9f0300;
+  background: rgba(255, 255, 255, 0.8);
+}
+.filepicker .directory > li.picked {
+  background-color: #9f0300;
+  color: white;
+}
+.directory {
+  padding: 0 0.5em;
+}
+.directory .directory-list {
+  position: relative;
+  margin: 0.25em 0.25em;
+  padding: 10px 0px;
+}
+.directory .directory-list::before {
+  content: "";
+  background: #9f0300;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  bottom: 0;
+  z-index: -1;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.directory .directory-list .directory-item:not(.folder) {
+  position: relative;
+  border: none;
+  background: none;
+  color: black;
+}
+.directory .directory-list .directory-item:not(.folder)::before {
+  content: "";
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+  z-index: -1;
+}
+.directory .directory-list .directory-item:not(.folder)::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.directory .directory-list .directory-item:not(.folder) > img {
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.directory .directory-list .directory-item.folder .context {
+  background-color: #9f0300 !important;
+}
+.directory .directory-header .header-search {
+  background-color: #9f0300;
+  color: white;
+  clip-path: polygon(6px 0px, calc(100% - 6px) 0px, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 6px 100%, 6px 100%, 0px calc(100% - 6px), 0px 6px);
+}
+.directory .directory-header .header-search input {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+#chat-log {
+  position: relative;
+  margin-bottom: 0.5em;
+}
+#chat-log::before {
+  content: "";
+  background: #9f0300;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  bottom: 0;
+  z-index: -1;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.chat-message {
+  border: none;
+  background: none;
+  padding: 0;
+}
+.chat-message .border-wrapper {
+  position: relative;
+  border: none;
+  background: white;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+  padding: 15px 0;
+}
+.chat-message .border-wrapper::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: var(--border-color, #9f0300);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.chat-message .message-header {
+  padding: 0.25em 8px;
+  background-color: #9f0300;
+  color: white;
+  background: var(--border-color, #9f0300);
+}
+.chat-message.whisper {
+  border: none;
+  background: none;
+}
+.chat-message.whisper .border-wrapper {
+  background: #e8e8ef;
+}
+.chat-message.emote {
+  border: none;
+  background: none;
+}
+.chat-message.emote .border-wrapper {
+  background: #f3edde;
+}
+.chat-message .message-sender {
+  font-size: 12px;
+}
+.chat-message .message-content {
+  padding: 8px 8px 0px;
+}
+.dice-roll,
+.dice-roll .dice-result,
+.dice-roll .roll-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+.dice-roll .dice-formula {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+  position: relative;
+  border: none;
+  background: white;
+  clip-path: polygon(4px 0px, calc(100% - 4px) 0px, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 4px 100%, 4px 100%, 0px calc(100% - 4px), 0px 4px);
+  margin-bottom: 0px;
+}
+.dice-roll .dice-formula::after {
+  clip-path: polygon(calc(100% - 4px) 0%, 4px 0%, 0% 4px, 0% calc(100% - 4px), 4px 100%, calc(2px + 4px) calc(100% - 2px), 2px calc(100% - 2px - 4px), 2px calc(2px + 4px), calc(2px + 4px) 2px, calc(100% - 2px - 4px) 2px, calc(100% - 2px) calc(2px + 4px), calc(100% - 2px) calc(100% - 2px - 4px), calc(100% - 2px - 4px) calc(100% - 2px), calc(2px + 4px) calc(100% - 2px), 4px 100%, calc(100% - 4px) 100%, 100% calc(100% - 4px), 100% 4px);
+  content: "";
+  background: #9f0300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.dice-roll .dice-total {
+  border: none;
+  background-color: #9f0300;
+  color: white;
+  clip-path: polygon(4px 0px, calc(100% - 4px) 0px, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 4px 100%, 4px 100%, 0px calc(100% - 4px), 0px 4px);
+}
+.inline-roll .dice-tooltip {
+  padding: 8px;
+  position: relative;
+  border: none;
+  background: white;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+  position: fixed;
+}
+.inline-roll .dice-tooltip::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(4px + 8px) calc(100% - 4px), 4px calc(100% - 4px - 8px), 4px calc(4px + 8px), calc(4px + 8px) 4px, calc(100% - 4px - 8px) 4px, calc(100% - 4px) calc(4px + 8px), calc(100% - 4px) calc(100% - 4px - 8px), calc(100% - 4px - 8px) calc(100% - 4px), calc(4px + 8px) calc(100% - 4px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #9f0300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.dice-roll .dice-tooltip .part-header,
+.inline-roll .dice-tooltip .part-header {
+  border-color: #9f0300;
+}
+.dice-roll .dice-tooltip .part-header .part-total,
+.inline-roll .dice-tooltip .part-header .part-total {
+  border: none;
+  background-color: #9f0300;
+  color: white;
+  clip-path: polygon(4px 0px, calc(100% - 4px) 0px, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 4px 100%, 4px 100%, 0px calc(100% - 4px), 0px 4px);
+}
+.dice-roll .dice-tooltip .part-formula,
+.inline-roll .dice-tooltip .part-formula {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+  color: #9f0300;
+}
+.dice-roll .dice-tooltip .dice-rolls,
+.inline-roll .dice-tooltip .dice-rolls {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+}
+#chat-controls {
+  padding: 8px 8px 4px;
+  background-color: #9f0300;
+  color: white;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% 100%, 0px 100%, 0px 100%, 0px 100%, 0px 8px);
+}
+#chat-controls .roll-type-select {
+  background: white;
+}
+#chat-form {
+  background: #9f0300;
+  display: flex;
+  justify-content: center;
+  clip-path: polygon(100% 0px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 0px);
+}
+#chat-form textarea {
+  background: rgba(255, 255, 255, 0.9);
+  width: calc(100% - 8px);
+  height: calc(100% - 4px);
+}
+#combat #combat-round {
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% 100%, 0px 100%, 0px 100%, 0px 100%, 0px 8px);
+  border: none;
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+  background-color: #9f0300;
+  color: white;
+}
+#combat #combat-round .encounters a,
+#combat #combat-round .encounters h4 {
+  color: white;
+}
+#combat #combat-controls {
+  clip-path: polygon(100% 0px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 0px);
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+  background-color: #9f0300;
+  color: white;
+}
+#combat #combat-tracker {
+  padding: 10px 0px;
+}
+#combat li.combatant {
+  border: none;
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+}
+#combat li.combatant .token-name,
+#combat li.combatant .token-initiative .initiative {
+  text-shadow: none;
+}
+#combat li.combatant .token-resource {
+  color: black;
+}
+#combat li.combatant .roll {
+  filter: invert(100%);
+}
+#combat li.combatant .roll:hover {
+  filter: none;
+}
+#combat li.combatant .token-name .combatant-control.active {
+  color: #9f0300;
+}
+#combat li.combatant.active {
+  position: relative;
+  border: none;
+  background: white;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+#combat li.combatant.active::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #9f0300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#combat li.combatant.hover,
+#combat li.combatant:hover {
+  background: #e8e8e8;
+}
+#combat li.combatant.hover.token-resource,
+#combat li.combatant:hover.token-resource {
+  color: white;
+}
+#scenes .scene {
+  clip-path: none;
+}
+#scenes .scene::before {
+  content: none;
+}
+#scenes .scene::after {
+  content: none;
+}
+#scenes .scene h3 {
+  color: white;
+}
+#playlists .global-control {
+  position: relative;
+  border: none;
+  background: white;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+#playlists .global-control::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(4px + 8px) calc(100% - 4px), 4px calc(100% - 4px - 8px), 4px calc(4px + 8px), calc(4px + 8px) 4px, calc(100% - 4px - 8px) 4px, calc(100% - 4px) calc(4px + 8px), calc(100% - 4px) calc(100% - 4px - 8px), calc(100% - 4px - 8px) calc(100% - 4px), calc(4px + 8px) calc(100% - 4px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #9f0300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#playlists .global-control:not(.collapsed) {
+  padding: 8px 0px;
+}
+#playlists .global-control .playlist-header {
+  background-color: #9f0300;
+  color: white;
+}
+#playlists .global-control .playlist-sounds * {
+  color: black;
+}
+#playlists .sound-control {
+  color: black;
+}
+#compendium .compendium-type {
+  position: relative;
+  border: none;
+  background: none;
+  padding: 8px 0px;
+}
+#compendium .compendium-type::before {
+  content: "";
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+  z-index: -1;
+}
+#compendium .compendium-type::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #9f0300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#compendium .compendium-type:not(:last-child) {
+  margin-bottom: 0.25em;
+}
+#compendium .compendium-type h3 {
+  border: none;
+  background-color: #9f0300;
+  color: white;
+}
+#compendium ol.compendium-list {
+  padding: 8px 8px 0px;
+}
+#compendium li.compendium-pack .status-icons {
+  right: 8px;
+  color: #9f0300;
+}
+#compendium li.compendium-pack .compendium-footer {
+  color: black;
+}
+.compendium .header-search {
+  height: 32px;
+}
+#settings h2 {
+  background-color: #9f0300;
+  color: white;
+}
+#settings #game-details {
+  color: black;
+}
+.item-stats {
+  border: none;
+  background-color: #9f0300;
+  color: white;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: normal;
+}
+.item-stats input,
+.item-stats select {
+  color: black;
+  background: white;
+}
+.item-stats input {
+  text-align: center;
+}
+.fs2e.sheet.item .window-content header {
+  position: relative;
+}
+.fs2e.sheet.item .window-content header::before {
+  content: "";
+  background: #9f0300;
+  position: absolute;
+  top: 0.25em;
+  left: 0.25em;
+  right: 0.25em;
+  bottom: 0.25em;
+  z-index: -1;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.fs2e.sheet.item .window-content header input {
+  background: white;
+}
+.fs2e.sheet.item .effects-list li {
+  border-bottom: 1px solid #9f0300;
+}
+.fs2e.sheet.namedCharacter .stat-block {
+  padding: 0 0.75em;
+}
+.fs2e.sheet.namedCharacter .stat-block .stat-name,
+.fs2e.sheet.namedCharacter .stat-block .stat-value {
+  width: 80%;
+}
+.fs2e.sheet.namedCharacter .stat-block .stat-value,
+.fs2e.sheet.namedCharacter .stat-block .stat-value > * {
+  font-family: "Gotham Book";
+  text-transform: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.fs2e.sheet.namedCharacter .stat-block .stat-name {
+  font-size: 1.075rem;
+  margin-top: 0.15em;
+  z-index: 1;
+}
+.fs2e.sheet.namedCharacter .stat-block .stat-name,
+.fs2e.sheet.namedCharacter .stat-block .stat-name > * {
+  color: white;
+  background-color: #9f0300;
+}
+.fs2e.sheet.namedCharacter .stat-block .stat-value {
+  font-size: 1.8rem;
+  background-color: white;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.fs2e.sheet .panelBorder {
+  position: relative;
+  border: none;
+  background: white;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.fs2e.sheet .panelBorder::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #9f0300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.fs2e.sheet h2 {
+  font-size: 1.2rem;
+  color: white;
+  background-color: #9f0300;
+}
+.fs2e.sheet.namedCharacter {
+  height: fit-content !important;
+  width: min-content !important;
+}
+.fs2e.sheet.namedCharacter .window-content {
+  min-width: 800px;
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: bold;
+  padding: 0;
+  background: white;
+}
+.fs2e.sheet.namedCharacter .window-content .sidebar {
+  margin-right: 0.75em;
+}
+.fs2e.sheet.namedCharacter .window-content .sheet-body {
+  margin-left: 0.75em;
+  margin-top: 0.75em;
+}
+.fs2e.sheet.namedCharacter .window-content select {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: bold;
+}
+.fs2e.sheet.namedCharacter .window-content h1,
+.fs2e.sheet.namedCharacter .window-content h2 {
+  border: none;
+}
+.fs2e.sheet.namedCharacter input:not([type="checkbox"]),
+.fs2e.sheet.namedCharacter select,
+.fs2e.sheet.namedCharacter textarea {
+  background: none;
+  border: none;
+}
+.fs2e.sheet.namedCharacter .actor-name {
+  font-family: "Gotham Book";
+  text-transform: none;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+.fs2e.sheet.namedCharacter textarea {
+  font-family: "Gotham Book";
+  text-transform: none;
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+.fs2e.sheet.namedCharacter .archetype {
+  position: relative;
+  color: white;
+  padding: 0.25em;
+}
+.fs2e.sheet.namedCharacter .archetype::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: calc((100% - 80%) / 2);
+  right: calc((100% - 80%) / 2);
+  bottom: 0;
+  background-color: #9f0300;
+  clip-path: polygon(100% 0px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 0px);
+}
+.fs2e.sheet.namedCharacter .archetype div {
+  position: relative;
+  z-index: 3;
+  font-size: 2.1rem;
+  background: transparent;
+  padding-bottom: 1rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+.fs2e.sheet.namedCharacter .archetype div::before {
+  content: attr(data-archetype);
+  position: absolute;
+  -webkit-text-stroke: 0.175em black;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.fs2e.sheet.namedCharacter .archetype div::after {
+  content: attr(data-archetype);
+  position: absolute;
+  -webkit-text-stroke: 0.3em #9f0300;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -2;
+}
+.fs2e.sheet.namedCharacter .actor-img {
+  position: relative;
+  border: none;
+  background: white;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.fs2e.sheet.namedCharacter .actor-img::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #9f0300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.fs2e.sheet.namedCharacter .actor-img > img {
+  border: none;
+}
+.fs2e.sheet.namedCharacter .stats-and-weapons {
+  position: relative;
+}
+.fs2e.sheet.namedCharacter .stats-and-weapons::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: calc((100% - 80%) / 2);
+  right: calc((100% - 80%) / 2);
+  bottom: 0;
+  background-color: #9f0300;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.fs2e.sheet.namedCharacter .wealth,
+.fs2e.sheet.namedCharacter .impairment {
+  background-color: #9f0300;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.fs2e.sheet.namedCharacter .wealth select,
+.fs2e.sheet.namedCharacter .impairment select,
+.fs2e.sheet.namedCharacter .wealth option,
+.fs2e.sheet.namedCharacter .impairment option {
+  background-color: #9f0300;
+  color: white;
+  font-size: 1.1rem;
+}
+.fs2e.sheet.namedCharacter .impairment-values input {
+  background: white;
+  clip-path: polygon(4px 0px, calc(100% - 4px) 0px, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 4px 100%, 4px 100%, 0px calc(100% - 4px), 0px 4px);
+  width: fit-content;
+}
+.fs2e.sheet.namedCharacter .impairment-values .impairment-total {
+  color: white;
+}
+.fs2e.sheet.namedCharacter .wound-points {
+  padding: 1em;
+}
+.fs2e.sheet .wound-points {
+  background-color: #9f0300;
+}
+.fs2e.sheet .wound-points .wounds-header {
+  text-align: center;
+  font-size: 0.9rem;
+  color: white;
+}
+.fs2e.sheet .wound-points .wound-point {
+  font-family: "Gotham Book";
+  text-transform: none;
+  font-weight: bold;
+}
+.fs2e.sheet .wound-points .wound-box {
+  font-size: 0.87rem;
+  background-color: white;
+  position: relative;
+  border: none;
+  background: white;
+  clip-path: polygon(33% 0px, calc(100% - 33%) 0px, 100% 33%, 100% calc(100% - 33%), calc(100% - 33%) 100%, 33% 100%, 33% 100%, 33% 100%, 0px calc(100% - 33%), 0px 33%);
+}
+.fs2e.sheet .wound-points .wound-box::after {
+  clip-path: polygon(calc(100% - 33%) 0%, 33% 0%, 0% 33%, 0% calc(100% - 33%), 33% 100%, calc(2px + 33%) calc(100% - 2px), 2px calc(100% - 2px - 33%), 2px calc(2px + 33%), calc(2px + 33%) 2px, calc(100% - 2px - 33%) 2px, calc(100% - 2px) calc(2px + 33%), calc(100% - 2px) calc(100% - 2px - 33%), calc(100% - 2px - 33%) calc(100% - 2px), calc(2px + 33%) calc(100% - 2px), 33% 100%, calc(100% - 33%) 100%, 100% calc(100% - 33%), 100% 33%);
+  content: "";
+  background: #9f0300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.fs2e.sheet .wound-points .wound-box.impair {
+  color: white;
+  position: relative;
+  border: none;
+  background: #9f0300;
+  clip-path: polygon(33% 0px, calc(100% - 33%) 0px, 100% 33%, 100% calc(100% - 33%), calc(100% - 33%) 100%, 33% 100%, 33% 100%, 33% 100%, 0px calc(100% - 33%), 0px 33%);
+}
+.fs2e.sheet .wound-points .wound-box.impair::after {
+  clip-path: polygon(calc(100% - 33%) 0%, 33% 0%, 0% 33%, 0% calc(100% - 33%), 33% 100%, calc(2px + 33%) calc(100% - 2px), 2px calc(100% - 2px - 33%), 2px calc(2px + 33%), calc(2px + 33%) 2px, calc(100% - 2px - 33%) 2px, calc(100% - 2px) calc(2px + 33%), calc(100% - 2px) calc(100% - 2px - 33%), calc(100% - 2px - 33%) calc(100% - 2px), calc(2px + 33%) calc(100% - 2px), 33% 100%, calc(100% - 33%) 100%, 100% calc(100% - 33%), 100% 33%);
+  content: "";
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.fs2e.sheet .wound-points .impairment {
+  font-size: 1.05rem;
+  color: white;
+}
+.fs2e .death-marks h2 {
+  font-size: 1.6rem;
+  text-align: center;
+}
+.fs2e .death-marks .img-container {
+  position: relative;
+  border: none;
+  background: white;
+  clip-path: polygon(33% 0px, calc(100% - 33%) 0px, 100% 33%, 100% calc(100% - 33%), calc(100% - 33%) 100%, 33% 100%, 33% 100%, 33% 100%, 0px calc(100% - 33%), 0px 33%);
+}
+.fs2e .death-marks .img-container::after {
+  clip-path: polygon(calc(100% - 33%) 0%, 33% 0%, 0% 33%, 0% calc(100% - 33%), 33% 100%, calc(2px + 33%) calc(100% - 2px), 2px calc(100% - 2px - 33%), 2px calc(2px + 33%), calc(2px + 33%) 2px, calc(100% - 2px - 33%) 2px, calc(100% - 2px) calc(2px + 33%), calc(100% - 2px) calc(100% - 2px - 33%), calc(100% - 2px - 33%) calc(100% - 2px), calc(2px + 33%) calc(100% - 2px), 33% 100%, calc(100% - 33%) 100%, 100% calc(100% - 33%), 100% 33%);
+  content: "";
+  background: #9f0300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.fs2e.sheet .skills .skill-item > * {
+  font-size: 1.2rem;
+  text-transform: lowercase;
+  color: #9f0300;
+}
+.fs2e.sheet .skills .unskilled-check {
+  font-size: 0.9rem;
+  text-align: center;
+  background-color: #9f0300;
+  color: white;
+}
+.weapon-card .weapon-info {
+  font-size: 1.1rem;
+  padding-bottom: 0.25em;
+  text-align: center;
+  position: relative;
+  border: none;
+  background: white;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.weapon-card .weapon-info::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #9f0300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.shtick-card .shtick-description {
+  font-family: "Gotham Book";
+  text-transform: none;
+  font-weight: normal;
+}
+.shtick-card .shtick-cost {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.shtick-border[data-type="core"] {
+  position: relative;
+  border: none;
+  background: #f0d5bb;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.shtick-border[data-type="core"]::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #ce751e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.shtick-border[data-type="core"] .shtick-name {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: #ce751e;
+  color: white;
+}
+.shtick-border[data-type="core"] .shtick-cost {
+  background-color: #ce751e;
+  clip-path: polygon(calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 10px 100%, 10px 100%, 0px calc(100% - 10px), 0px 0px);
+}
+.shtick-border[data-type="core"] .shtick-cost::before {
+  clip-path: polygon(calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 10px 100%, 10px 100%, 0px calc(100% - 10px), 0px 0px);
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: white;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+}
+.shtick-border[data-type="core"] .fortune-cost {
+  color: #ce751e;
+}
+.shtick-border[data-type="core"] .shot-cost {
+  background-color: #ce751e;
+  color: white;
+}
+.shtick-border[data-type="supernatural"] {
+  position: relative;
+  border: none;
+  background: #deb2cc;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.shtick-border[data-type="supernatural"]::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #910055;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.shtick-border[data-type="supernatural"] .shtick-name {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: #910055;
+  color: white;
+}
+.shtick-border[data-type="supernatural"] .shtick-cost {
+  background-color: #910055;
+  clip-path: polygon(calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 10px 100%, 10px 100%, 0px calc(100% - 10px), 0px 0px);
+}
+.shtick-border[data-type="supernatural"] .shtick-cost::before {
+  clip-path: polygon(calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 10px 100%, 10px 100%, 0px calc(100% - 10px), 0px 0px);
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: white;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+}
+.shtick-border[data-type="supernatural"] .fortune-cost {
+  color: #910055;
+}
+.shtick-border[data-type="supernatural"] .shot-cost {
+  background-color: #910055;
+  color: white;
+}
+.shtick-border[data-type="gun"] {
+  position: relative;
+  border: none;
+  background: #c3cdd1;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.shtick-border[data-type="gun"]::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #375867;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.shtick-border[data-type="gun"] .shtick-name {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: #375867;
+  color: white;
+}
+.shtick-border[data-type="gun"] .shtick-cost {
+  background-color: #375867;
+  clip-path: polygon(calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 10px 100%, 10px 100%, 0px calc(100% - 10px), 0px 0px);
+}
+.shtick-border[data-type="gun"] .shtick-cost::before {
+  clip-path: polygon(calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 10px 100%, 10px 100%, 0px calc(100% - 10px), 0px 0px);
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: white;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+}
+.shtick-border[data-type="gun"] .fortune-cost {
+  color: #375867;
+}
+.shtick-border[data-type="gun"] .shot-cost {
+  background-color: #375867;
+  color: white;
+}
+.shtick-border[data-type="animal"] {
+  position: relative;
+  border: none;
+  background: #f8cdbf;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.shtick-border[data-type="animal"]::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #e85b2a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.shtick-border[data-type="animal"] .shtick-name {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: #e85b2a;
+  color: white;
+}
+.shtick-border[data-type="animal"] .shtick-cost {
+  background-color: #e85b2a;
+  clip-path: polygon(calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 10px 100%, 10px 100%, 0px calc(100% - 10px), 0px 0px);
+}
+.shtick-border[data-type="animal"] .shtick-cost::before {
+  clip-path: polygon(calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 10px 100%, 10px 100%, 0px calc(100% - 10px), 0px 0px);
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: white;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+}
+.shtick-border[data-type="animal"] .fortune-cost {
+  color: #e85b2a;
+}
+.shtick-border[data-type="animal"] .shot-cost {
+  background-color: #e85b2a;
+  color: white;
+}
+.shtick-border[data-type="fu"] {
+  position: relative;
+  border: none;
+  background: #cbd7c5;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.shtick-border[data-type="fu"]::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #537b40;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.shtick-border[data-type="fu"] .shtick-name {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: #537b40;
+  color: white;
+}
+.shtick-border[data-type="fu"] .shtick-cost {
+  background-color: #537b40;
+  clip-path: polygon(calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 10px 100%, 10px 100%, 0px calc(100% - 10px), 0px 0px);
+}
+.shtick-border[data-type="fu"] .shtick-cost::before {
+  clip-path: polygon(calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 10px 100%, 10px 100%, 0px calc(100% - 10px), 0px 0px);
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: white;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+}
+.shtick-border[data-type="fu"] .fortune-cost {
+  color: #537b40;
+}
+.shtick-border[data-type="fu"] .shot-cost {
+  background-color: #537b40;
+  color: white;
+}
+.shtick-border[data-type="gene"] {
+  position: relative;
+  border: none;
+  background: #b2d3d8;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.shtick-border[data-type="gene"]::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #006c7d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.shtick-border[data-type="gene"] .shtick-name {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: #006c7d;
+  color: white;
+}
+.shtick-border[data-type="gene"] .shtick-cost {
+  background-color: #006c7d;
+  clip-path: polygon(calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 10px 100%, 10px 100%, 0px calc(100% - 10px), 0px 0px);
+}
+.shtick-border[data-type="gene"] .shtick-cost::before {
+  clip-path: polygon(calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 10px 100%, 10px 100%, 0px calc(100% - 10px), 0px 0px);
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: white;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+}
+.shtick-border[data-type="gene"] .fortune-cost {
+  color: #006c7d;
+}
+.shtick-border[data-type="gene"] .shot-cost {
+  background-color: #006c7d;
+  color: white;
+}
+.shtick-border[data-type="driving"] {
+  position: relative;
+  border: none;
+  background: #c4c3c4;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.shtick-border[data-type="driving"]::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #3a393c;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.shtick-border[data-type="driving"] .shtick-name {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: #3a393c;
+  color: white;
+}
+.shtick-border[data-type="driving"] .shtick-cost {
+  background-color: #3a393c;
+  clip-path: polygon(calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 10px 100%, 10px 100%, 0px calc(100% - 10px), 0px 0px);
+}
+.shtick-border[data-type="driving"] .shtick-cost::before {
+  clip-path: polygon(calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 10px 100%, 10px 100%, 0px calc(100% - 10px), 0px 0px);
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: white;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+}
+.shtick-border[data-type="driving"] .fortune-cost {
+  color: #3a393c;
+}
+.shtick-border[data-type="driving"] .shot-cost {
+  background-color: #3a393c;
+  color: white;
+}
+.shtick-border[data-type="scroungetech"] {
+  position: relative;
+  border: none;
+  background: #cec6d0;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.shtick-border[data-type="scroungetech"]::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #5d4363;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.shtick-border[data-type="scroungetech"] .shtick-name {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: #5d4363;
+  color: white;
+}
+.shtick-border[data-type="scroungetech"] .shtick-cost {
+  background-color: #5d4363;
+  clip-path: polygon(calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 10px 100%, 10px 100%, 0px calc(100% - 10px), 0px 0px);
+}
+.shtick-border[data-type="scroungetech"] .shtick-cost::before {
+  clip-path: polygon(calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 10px 100%, 10px 100%, 0px calc(100% - 10px), 0px 0px);
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: white;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+}
+.shtick-border[data-type="scroungetech"] .fortune-cost {
+  color: #5d4363;
+}
+.shtick-border[data-type="scroungetech"] .shot-cost {
+  background-color: #5d4363;
+  color: white;
+}
+.shtick-border[data-type="sorcery"] {
+  position: relative;
+  border: none;
+  background: #b2cad7;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.shtick-border[data-type="sorcery"]::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #004e7a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.shtick-border[data-type="sorcery"] .shtick-name {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: #004e7a;
+  color: white;
+}
+.shtick-border[data-type="sorcery"] .shtick-cost {
+  background-color: #004e7a;
+  clip-path: polygon(calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 10px 100%, 10px 100%, 0px calc(100% - 10px), 0px 0px);
+}
+.shtick-border[data-type="sorcery"] .shtick-cost::before {
+  clip-path: polygon(calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 10px 100%, 10px 100%, 0px calc(100% - 10px), 0px 0px);
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: white;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+}
+.shtick-border[data-type="sorcery"] .fortune-cost {
+  color: #004e7a;
+}
+.shtick-border[data-type="sorcery"] .shot-cost {
+  background-color: #004e7a;
+  color: white;
+}
+.shtick-border[data-type="disadvantage"] {
+  position: relative;
+  border: none;
+  background: #e6e7e7;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.shtick-border[data-type="disadvantage"]::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.shtick-border[data-type="disadvantage"] .shtick-name {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: #000000;
+  color: white;
+}
+.shtick-border[data-type="disadvantage"] .shtick-cost {
+  background-color: #000000;
+  clip-path: polygon(calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 10px 100%, 10px 100%, 0px calc(100% - 10px), 0px 0px);
+}
+.shtick-border[data-type="disadvantage"] .shtick-cost::before {
+  clip-path: polygon(calc(100% - 10px) 0px, 100% 10px, 100% 100%, 10px 100%, 10px 100%, 10px 100%, 0px calc(100% - 10px), 0px 0px);
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: white;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+}
+.shtick-border[data-type="disadvantage"] .fortune-cost {
+  color: #000000;
+}
+.shtick-border[data-type="disadvantage"] .shot-cost {
+  background-color: #000000;
+  color: white;
+}
+.shtick-border #context-menu.expand-down {
+  top: 0;
+}
+.gear-item {
+  text-transform: lowercase;
+  font-family: "Baron Neue";
+  font-weight: bold;
+}
+.gear-item h3 {
+  background-color: #9f0300;
+  color: white;
+  padding: 0 0.75em 0.25em;
+}
+.gear-item table {
+  border: none;
+  background: none;
+}
+.gear-item th {
+  background-color: black;
+  color: white;
+  padding-bottom: 0.25em;
+}
+.gear-item td {
+  padding-bottom: 0.25em;
+}
+.gear-item tr {
+  text-align: center;
+  border-bottom: solid 2px black;
+}
+.gear-item p {
+  font-family: "Gotham Book";
+  text-transform: none;
+  font-weight: normal;
+}

@@ -1,0 +1,13 @@
+<form class="fs2e token-picker">
+  <div class="tokens">
+    <ul class="token-list">
+      {{#each passengers as |passenger id|}}
+      <li class="passenger-token">
+        <input class="token-select" type="checkbox" name="passenger{{passenger.id}}" data-id="{{passenger.id}}" />
+        <img src="{{passenger.img}}" title="{{passenger.name}}" />
+        <h3>{{passenger.name}}</h3>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</form>

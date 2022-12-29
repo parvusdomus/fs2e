@@ -1,0 +1,64 @@
+.shtick-card {
+  .shtick-description {
+    .GothamBook();
+  }
+
+  .shtick-cost {
+    .BaronNeue(bold);
+    font-size: 1.4rem;
+  }
+}
+
+.shtick-border {
+  @shtick-types: core, supernatural, gun, animal, fu, gene, driving, scroungetech, sorcery, disadvantage;
+
+  each(@shtick-types, {
+    @main-color: "@{value}-main-color";
+    @bg-color: "@{value}-bg-color";
+
+    &[data-type="@{value}"] {
+      .shtickAppearance(@@main-color, @@bg-color);
+    }
+  })
+
+  #context-menu.expand-down {
+    top: 0;
+  }
+}
+
+.shtickAppearance(@shtick-main-color: @main-color, @shtick-accent-color: @sheet-background){
+  .clippedBorder(@shtick-main-color, 2px, @shtick-accent-color, @defaultCornerClip);
+
+  .shtick-name {
+    .BaronNeue(bold);
+    font-size: 1.2rem;
+    background-color: @shtick-main-color;
+    color: @accent-color;
+  }
+
+  .shtick-cost {
+    background-color: @shtick-main-color;
+    @borderThickness: 2px;
+    .clipCost(10px);
+    &::before{
+      .clipCost(10px);
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background: @accent-color;
+      top: @borderThickness;
+      left: @borderThickness;
+      right: @borderThickness;
+      bottom: @borderThickness;
+    }
+  }
+
+  .fortune-cost{
+    color: @shtick-main-color;
+  }
+
+  .shot-cost{
+    background-color: @shtick-main-color;
+    color: @accent-color;
+  }
+}
