@@ -56,7 +56,7 @@ async function onApplySmackdown(event) {
   const button = event.currentTarget.closest(".smackdown-button");
   const actor = await Utils.getActorFromUUID(button.dataset.defenderId);
   const smackdown = parseInt(button.dataset.smackdown);
-  const actorData = actor.data.data;
+  const actorData = actor.system;
   const wounds = actorData.wounds;
 
   let downed = false;
@@ -65,20 +65,20 @@ async function onApplySmackdown(event) {
   let effectiveToughness = actorData.toughness;
 
   const armors = actor.getEmbeddedCollection("Item").contents
-    .filter(item => item.data.type == "armor");
+    .filter(item => item.type == "armor");
 
   const canUseArmor = armors.length > 0;
 
   if (canUseArmor && button.dataset.useThunk) {
     const armor = armors[0];
 
-    effectiveToughness += parseInt(armor.data.data.thunk);
+    effectiveToughness += parseInt(armor.system.thunk);
   }
 
   let actualDamage = Math.max(0, smackdown - effectiveToughness);
   let newWounds = Math.min(parseInt(wounds.max), parseInt(wounds.value) + actualDamage);
 
-  switch (actor.data.type) {
+  switch (actor.type) {
     case "featuredFoe":
       downed = newWounds === wounds.max;
       break;
@@ -101,7 +101,7 @@ async function onApplySmackdown(event) {
   };
 
   ChatMessage.create({
-    user: game.user.data._id,
+    user: game.user._id,
     speaker: game.user,
     content: await renderTemplate(template, templateData),
     whisper: game.users.filter(user => actor.testUserPermission(user, "OWNER"))
@@ -123,7 +123,7 @@ async function onApplyDamage(event) {
  * @param {Roll} roll 
  */
 async function ResolveAttack(attacker, weapon, roll) {
-  const weaponDamage = weapon.data.data.damage;
+  const weaponDamage = weapon.system.damage;
   let defenders = Array.from(game.users.current.targets).map(target => target.actor);;
 
   defenders.sort((a, b) => {
@@ -131,9 +131,8 @@ async function ResolveAttack(attacker, weapon, roll) {
   });
 
   const topDefender = defenders[0];
-
-  const topDefenderIsMook = topDefender.data.type == "mook";
-  const mookBonus = weapon.data.data.mookBonus;
+  const topDefenderIsMook = topDefender.type == "mook";
+  const mookBonus = weapon.system.mookBonus;
 
   const attack = topDefenderIsMook ? roll + mookBonus : roll;
 
@@ -145,7 +144,7 @@ async function ResolveAttack(attacker, weapon, roll) {
       user: game.user.id,
       speaker: game.user,
       content: await renderTemplate("systems/fs2e/templates/chat/attack-fail.hbs", {
-        blocker: topDefender.data
+        blocker: topDefender
       })
     });
   }
@@ -169,7 +168,7 @@ async function ResolveAttack(attacker, weapon, roll) {
 export async function SendDamageMessage(attacker, defender, outcome, smackdown, failedDodge = false) {
   const template = "systems/fs2e/templates/chat/attack-success.hbs";
   const armors = defender.getEmbeddedCollection("Item").contents
-    .filter(item => item.data.type == "armor");
+    .filter(item => item.type == "armor");
 
   let templateData = {
     smackdown: smackdown,
@@ -178,19 +177,19 @@ export async function SendDamageMessage(attacker, defender, outcome, smackdown, 
     defenderName: defender.name,
     defenderId: defender.uuid,
     canUseArmor: armors.length > 0,
-    canRetroactiveDodge: !defender.data.data.dodgeBonus
+    canRetroactiveDodge: !defender.system.dodgeBonus
       && game.settings.get("fs2e", "allowRetroactiveDodge")
       && !failedDodge,
     outcome,
     failedDodge
   };
 
-  if (defender.data.type == "mook") {
+  if (defender.type == "mook") {
     templateData.downed = true;
     templateData.damage = smackdown;
   }
 
-  defender.update({ "data.dodgeBonus": 0 });
+  defender.update({ "system.dodgeBonus": 0 });
 
   ChatMessage.create({
     user: game.user._id,
@@ -203,8 +202,8 @@ export async function SendDamageMessage(attacker, defender, outcome, smackdown, 
 export async function SendAttackNotificationMessage(attacker, target) {
   const template = "systems/fs2e/templates/chat/attack-notification.hbs";
   const templateData = {
-    attackerName: attacker.data.name,
-    targetName: target.data.name,
+    attackerName: attacker.name,
+    targetName: target.name,
     attackerId: attacker.uuid,
     defenderId: target.uuid
   };

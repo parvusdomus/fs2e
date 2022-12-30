@@ -13,12 +13,12 @@ export default class FS2VehicleSheet extends FS2ActorSheetBase {
 
   getData() {
     let sheetData = super.getData();
-    const vehicleData = this.actor.data.data;
+    const vehicleData = this.actor.system;
 
     const driver = Utils.getActorFromToken(vehicleData.driver);
 
     if (driver) {
-      sheetData.driver = driver.data;
+      sheetData.driver = driver;
       sheetData.driver.drivingSkill = driver.getActionValueForSkillName("Driving");
       sheetData.drivingSkill = sheetData.driver.drivingSkill;
     }
@@ -29,7 +29,7 @@ export default class FS2VehicleSheet extends FS2ActorSheetBase {
     sheetData.passengers = vehicleData.passengers.map((passenger) => {
       return {
         tokenId: passenger,
-        data: Utils.getActorFromToken(passenger).data
+        data: Utils.getActorFromToken(passenger)
       };
     })
 
@@ -50,45 +50,45 @@ export default class FS2VehicleSheet extends FS2ActorSheetBase {
 
   async _onPassengerControl(event) {
     const action = event.currentTarget.dataset.action;
-    const currentPassengers = this.actor.data.data.passengers;
+    const currentPassengers = this.actor.system.passengers;
 
     if (action == "add") {
       let newPassengers = await this._pickPassengers();
       return this.actor.update({
-        "data.passengers": newPassengers.concat(currentPassengers)
+        "system.passengers": newPassengers.concat(currentPassengers)
       });
     }
 
     if (action == "empty") {
       return this.actor.update({
-        "data.passengers": []
+        "system.passengers": []
       });
     }
     const passengerId = event.currentTarget.closest(".passenger").dataset.passengerId;
 
     if (action == "delete") {
-      let passengers = this.actor.data.data.passengers.filter(id => id != passengerId);
+      let passengers = this.actor.system.passengers.filter(id => id != passengerId);
 
       return this.actor.update({
-        "data.passengers": passengers
+        "system.passengers": passengers
       });
     }
   }
 
   async _pickPassengers() {
     const template = "systems/fs2e/templates/chat/token-picker-dialog.hbs";
-    const currentPassengers = this.actor.data.data.passengers;
+    const currentPassengers = this.actor.system.passengers;
     // Non-GM users cannot assign hostile passengers to the vehicle.
     const filteredTokens = canvas.tokens.children[0].children.filter(token =>
       token.actor.type != "vehicle"
       && !currentPassengers.includes(token.id)
-      && (game.user.isGM || token.data.disposition != CONST.TOKEN_DISPOSITIONS.HOSTILE)
+      && (game.user.isGM || token.disposition != CONST.TOKEN_DISPOSITIONS.HOSTILE)
     );
     const sceneTokens = filteredTokens.map(token => {
       return {
-        name: token.data.name,
-        img: token.data.img,
-        id: token.data._id
+        name: token.name,
+        img: token.img,
+        id: token._id
       };
     });
 
@@ -147,7 +147,7 @@ export default class FS2VehicleSheet extends FS2ActorSheetBase {
       return;
     }
 
-    let passengers = this.actor.data.data.passengers;
+    let passengers = this.actor.system.passengers;
     const newPassenger = data.id;
 
     if (passengers.includes(newPassenger)) {
@@ -170,7 +170,7 @@ export default class FS2VehicleSheet extends FS2ActorSheetBase {
       }
 
       return this.actor.update({
-        "data.passengers": passengers
+        "system.passengers": passengers
       });
     }
 
@@ -178,7 +178,7 @@ export default class FS2VehicleSheet extends FS2ActorSheetBase {
     passengers.push(newPassenger);
 
     await this.actor.update({
-      "data.passengers": passengers
+      "system.passengers": passengers
     });
   }
 }

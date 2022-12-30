@@ -14,7 +14,7 @@ export async function TaskCheck({
   sendMessage = true,
   isAttack = false } = {}) {
   const messageTemplate = "systems/fs2e/templates/chat/task-check.hbs";
-  const actorData = actor ? actor.data.data : null;
+  const actorData = actor ? actor.system : null;
   const hasFortune = actor.hasFortune;
 
   useFortune = useFortune && hasFortune;
@@ -59,7 +59,7 @@ export async function TaskCheck({
 
   if (useFortune && game.settings.get("fs2e", "automateFortuneSpending")) {
     // Spend fortune point.
-    actor.update({ "data.fortune.value": actorData.fortune.value - 1 });
+    actor.update({ "system.fortune.value": actorData.fortune.value - 1 });
   }
 
   if (sendMessage) {
@@ -133,7 +133,7 @@ function _getSwerve(roll) {
 }
 
 export async function DeathCheck(actor) {
-  const actorData = actor.data.data;
+  const actorData = actor.system;
   TaskCheck({
     taskType: game.i18n.localize(fs2e.taskCheckTypes["death"]),
     actor,
@@ -146,7 +146,7 @@ export async function DeathCheck(actor) {
 export async function ReloadCheck(weapon) {
   const template = "systems/fs2e/templates/chat/binary-check.hbs";
   const taskType = game.i18n.localize(fs2e.taskCheckTypes["reload"]);
-  let rollResult = await new Roll("1d6cs>@reload", weapon.data.data).roll({ async: true });
+  let rollResult = await new Roll("1d6cs>@reload", weapon.system).roll({ async: true });
 
   let extraData = {
     taskType,
@@ -159,7 +159,7 @@ export async function ReloadCheck(weapon) {
 export async function UpCheck(actor, useFortune = false) {
   const template = "systems/fs2e/templates/chat/binary-check.hbs";
   const taskType = game.i18n.localize(fs2e.taskCheckTypes["up"]);
-  const actorData = actor.data;
+  const actorData = actor;
   let rollResult;
 
   let extraData = {
@@ -168,7 +168,7 @@ export async function UpCheck(actor, useFortune = false) {
   };
 
   if (actorData.type == "boss") {
-    rollResult = await new Roll("1d2 - 1", actorData.data).roll({ async: true });
+    rollResult = await new Roll("1d2 - 1", actorData.system).roll({ async: true });
 
     extraData.success = rollResult.total > 0;
   }
@@ -176,7 +176,7 @@ export async function UpCheck(actor, useFortune = false) {
     rollResult = await TaskCheck({
       taskType,
       actor,
-      actionValue: actorData.data.toughness,
+      actionValue: actorData.system.toughness,
       useFortune: useFortune,
       difficulty: fs2e.upCheckDifficulty,
       sendMessage: false
@@ -195,7 +195,7 @@ export async function UpCheck(actor, useFortune = false) {
  * @param {boolean} askforOptions 
  */
 export async function Attack(attacker, weapon, askforOptions) {
-  const statName = weapon.data.data.attackWith;
+  const statName = weapon.system.attackWith;
   let actionValue = attacker.getStatForAttackName(statName);
   const targets = Array.from(game.users.current.targets).map(target => target.actor);
   const targetCount = targets.length;
@@ -209,7 +209,7 @@ export async function Attack(attacker, weapon, askforOptions) {
     askForOptions: askforOptions,
     isAttack: true,
     modifier: targetCount > 1 ? -targetCount : 0,
-    extraMessageData: { weapon: weapon.data, weaponID: weapon.uuid }
+    extraMessageData: { weapon: weapon, weaponID: weapon.uuid }
   });
 }
 
@@ -260,7 +260,7 @@ export async function Dodge(attacker, defender, askForOptions, retroactive = fal
   let dodgeBonus = fs2e.combat.dodgeDefenseBonus + modifier;
 
   const templateData = {
-    attackerName: attacker.data.name,
+    attackerName: attacker.name,
     defenderName: defender.name
   }
 
@@ -273,7 +273,7 @@ export async function Dodge(attacker, defender, askForOptions, retroactive = fal
 
     if (game.settings.get("fs2e", "automateFortuneSpending")) {
       // Spend fortune point.
-      updateData["data.fortune.value"] = defender.data.data.fortune.value - 1;
+      updateData["system.fortune.value"] = defender.system.fortune.value - 1;
     }
 
     let rollFormula = "@base + 1d6";
@@ -287,7 +287,7 @@ export async function Dodge(attacker, defender, askForOptions, retroactive = fal
   }
 
   templateData.value = dodgeBonus;
-  updateData["data.dodgeBonus"] = dodgeBonus;
+  updateData["system.dodgeBonus"] = dodgeBonus;
 
   // Retroactive dodge handling
   if (retroactive) {

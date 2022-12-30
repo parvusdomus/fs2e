@@ -42,13 +42,13 @@ export default class FS2Actor extends Actor {
   }
 
   getEffectiveDefense() {
-    let actorData = this.data;
-    let data = actorData.data;
+    let actorData = this;
+    let data = actorData.system;
 
     let baseDefense;
     if (actorData.type == "vehicle") {
       // Assuming the driver's defense.
-      baseDefense = Utils.getActorFromToken(data.driver)?.data.data.defense;
+      baseDefense = Utils.getActorFromToken(data.driver)?.system.defense;
     }
     else {
       baseDefense = data.defense;
@@ -66,20 +66,20 @@ export default class FS2Actor extends Actor {
   getActionValueForSkillName(name) {
     let actionValue = fs2e.unskilledCheckValue;
     const relevantSkills = this.getEmbeddedCollection("Item").contents
-      .filter(item => item.data.type == "skill" && item.data.name == name);
+      .filter(item => item.type == "skill" && item.name == name);
 
 
     if (relevantSkills.length > 0) {
-      actionValue = parseInt(relevantSkills[0].data.data.value);
+      actionValue = parseInt(relevantSkills[0].system.value);
     }
 
     return actionValue;
   }
 
   getStatForAttackName(name) {
-    let data = this.data.data;
+    let data = this.system;
 
-    if (this.data.type == "mook") {
+    if (this.type == "mook") {
       // mooks always use primary attack
       return data.attackPrimary.value;
     }
@@ -94,9 +94,9 @@ export default class FS2Actor extends Actor {
 
   applyDamage(damage) {
 
-    const wounds = this.data.data.wounds;
+    const wounds = this.system.wounds;
     const newWounds = Math.min(Math.max(wounds.value + damage, 0), wounds.max);
 
-    this.update({ "data.wounds.value": newWounds });
+    this.update({ "system.wounds.value": newWounds });
   }
 }

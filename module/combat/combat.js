@@ -8,8 +8,8 @@ export default class FS2Combat extends Combat {
       return initDifference;
     }
 
-    const typeA = a.actor.data.type;
-    const typeB = b.actor.data.type;
+    const typeA = a.actor.type;
+    const typeB = b.actor.type;
 
     if (typeA != typeB) {
       if (typeA == "hero") {
@@ -26,23 +26,23 @@ export default class FS2Combat extends Combat {
   _onUpdateEmbeddedDocuments(embeddedName, documents, result, options, userId) {
     this.setupTurns();
     if (game.user.id === userId) this.update({ turn: 0 });
-    else this.data.update({ turn: 0 });
+    else this.update({ turn: 0 });
 
-    if (this.data.active && (options.render !== false)) this.collection.render();
+    if (this.active && (options.render !== false)) this.collection.render();
   }
 
   setupTurns() {
     // Determine the turn order and the current turn
     const turns = this.combatants.contents.sort(this._sortCombatants);
-    if (this.turn !== null) this.data.turn = 0;
+    if (this.turn !== null) this.turn = 0;
 
     // Update state tracking
     let c = turns[0];
     this.current = {
-      round: this.data.round,
+      round: this.round,
       turn: 0,
       combatantId: c ? c.id : null,
-      tokenId: c ? c.data.tokenId : null
+      tokenId: c ? c.tokenId : null
     };
     return this.turns = turns;
   }
@@ -70,7 +70,7 @@ export default class FS2Combat extends Combat {
     const messageTemplate = "systems/fs2e/templates/chat/interrupt.hbs"
     const spendResult = await this.spendShots(combatant, cost);
     const templateData = {
-      actor: combatant.actor.data,
+      actor: combatant.actor.system,
       cost: spendResult.shotsSpent,
       initiative: spendResult.newInitiative,
       shotsLeft: spendResult.newInitiative > 0

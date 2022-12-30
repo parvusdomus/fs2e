@@ -28,11 +28,11 @@ fs2e.attackTypes = {
 }
 
 fs2e.activeEffectChanges = {
-  "data.defense": "fs2e.stats.defense",
-  "data.speed": "fs2e.stats.speed",
-  "data.toughness": "fs2e.stats.toughness",
-  "data.bonuses.checks.up": "fs2e.chat.actions.upcheck",
-  "data.bonuses.checks.reload": "fs2e.chat.actions.reload",
+  "system.defense": "fs2e.stats.defense",
+  "system.speed": "fs2e.stats.speed",
+  "system.toughness": "fs2e.stats.toughness",
+  "system.bonuses.checks.up": "fs2e.chat.actions.upcheck",
+  "system.bonuses.checks.reload": "fs2e.chat.actions.reload",
   "attack.guns": "fs2e.attack.guns",
   "attack.martialArts": "fs2e.attack.martialArts",
   "attack.sorcery": "fs2e.attack.sorcery",

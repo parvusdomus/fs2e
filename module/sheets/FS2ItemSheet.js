@@ -61,6 +61,6 @@ export default class FS2ItemSheet extends ItemSheet {
 
   async _onShtickTypeChange(event) {
     await this._onSubmit(event);
-    this.item.update({ img: `systems/fs2e/icons/shticks/${this.item.data.data.type}.png` });
+    this.item.update({ img: `systems/fs2e/icons/shticks/${this.item.system.type}.png` });
   }
 }

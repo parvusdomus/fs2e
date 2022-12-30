@@ -66,17 +66,17 @@ export default class FS2NamedCharacterSheet extends FS2ActorSheetBase {
     const itemID = event.currentTarget.closest(".item").dataset.itemId;
     const shtick = this.actor.items.get(itemID);
     const effects = this.actor.getEmbeddedCollection("ActiveEffect").contents;
-    const relevantEffects = effects.filter(effect => effect.data.origin.endsWith(itemID));
+    const relevantEffects = effects.filter(effect => effect.origin.endsWith(itemID));
 
     if (relevantEffects.length == 0) {
       return;
     }
 
-    const newStatus = !shtick.data.data.active;
+    const newStatus = !shtick.system.active;
 
     const effect = relevantEffects[0];
     await effect.update({ disabled: !newStatus });
-    return shtick.update({ "data.active": newStatus })
+    return shtick.update({ "system.active": newStatus })
   }
 
   _onDeathCheck(event) {

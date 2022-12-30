@@ -67,7 +67,7 @@ export default class FS2ActorSheetBase extends ActorSheet {
           icon: '<i class="fas fa-edit"></i>',
           callback: element => {
             let selectedIndex = element.data("index");
-            this.actor.update({ "data.impairment.threshold": selectedIndex });
+            this.actor.update({ "system.impairment.threshold": selectedIndex });
           }
         }
       ]);
@@ -151,29 +151,29 @@ export default class FS2ActorSheetBase extends ActorSheet {
       --index;
     }
 
-    this.actor.update({ "data.wounds.value": index });
+    this.actor.update({ "system.wounds.value": index });
   }
 
   _onSortItem(event, itemData) {
     const source = this.actor.items.get(itemData._id);
 
-    switch (source.data.type) {
+    switch (source.type) {
       case "armor":
       case "vehicle":
         const siblings = this.actor.items.filter(i => {
-          return (i.data._id !== source.data._id);
+          return (i._id !== source._id);
         });
 
         // Get the drop target
         const dropTarget = event.target.closest("[data-item-id]");
         const targetId = dropTarget ? dropTarget.dataset.itemId : null;
-        const target = siblings.find(s => s.data._id === targetId);
+        const target = siblings.find(s => s._id === targetId);
 
         // Perform the sort
         const sortUpdates = SortingHelpers.performIntegerSort(source, { target: target, siblings });
         const updateData = sortUpdates.map(u => {
           const update = u.update;
-          update._id = u.target.data._id;
+          update._id = u.target._id;
           return update;
         });
 
