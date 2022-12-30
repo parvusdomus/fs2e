@@ -1,25 +1,34 @@
 {
-  "name":"fs2e",
+  "id":"fs2e",
   "title": "Feng Shui 2: The action movie roleplaying game",
   "description": "A system for playing Feng Shui 2 games.",
-  "author": "Mougli",
-  "version": 0.23,
-  "minimumCoreVersion": "9.255",
-  "compatibleCoreVersion": "9.269",
+  "version": "0.24",
+  "authors": [
+    {
+      "name": "Mougli, ParvusDomus, ForjaSalvaje",
+      "flags": {}
+    }
+  ],
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10"
+  },
   "esmodules": [
     "fs2e.js"
   ],
   "styles":[
     "fs2e.css"
   ],
-  "packs": [
-
-  ],
   "languages":[
     {
       "lang": "en",
       "name": "English",
       "path": "lang/en.json"
+    },
+    {
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/es.json"
     }
   ],
   "dependencies": [
@@ -29,11 +38,11 @@
     }
   ],
   "socket": true,
-  "gridDistance": 5,
-  "gridUnits": "ft",
+  "gridDistance": 2,
+  "gridUnits": "m",
   "primaryTokenAttribute": "wounds",
   "initiative": "1d6 + @speed",
-  "url": "https://gitlab.com/mougli/fs2e",
-  "manifest": "https://gitlab.com/api/v4/projects/mougli%2Ffs2e/packages/generic/fs2e/latest/system.json",
-  "download": "https://gitlab.com/mougli/fs2e/-/releases/release-0.23/downloads/fs2e-release-0.23.zip"
+  "url": "https://github.com/parvusdomus/fs2e",
+  "manifest": "https://raw.githubusercontent.com/parvusdomus/fs2e/master/system.json",
+  "download": "https://github.com/parvusdomus/fs2e/releases/release-0.23/downloads/fs2e-release-0.23.zip"
 }
