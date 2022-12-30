@@ -16,20 +16,25 @@ export default class FS2Item extends Item {
         taskType: this.name
       });
     }
-
+    //console.log ("THIS SYSTEM")
+    //console.log (...this.system)
     let cardData = {
       ...this.system,
       uuid: this.uuid,
       ownerID: this.actor.uuid,
       config: CONFIG.fs2e
     };
+    console.log ("CARD DATA")
+    console.log (cardData)
 
     let chatData = {
       user: game.user.id,
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-      roll: true,
+      //roll: true,
       content: await renderTemplate(this.chatTemplate[this.type], cardData)
     };
+    console.log ("CHAT DATA")
+    console.log (chatData)
 
     return ChatMessage.create(chatData);
   }
