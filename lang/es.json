@@ -1,0 +1,215 @@
+{
+  "fs2e": {
+    "actor": {
+      "hero": "Heroe",
+      "mook": "Masilla",
+      "featuredFoe": "Secuaz",
+      "boss": "Jefe",
+      "vehicle": "Vehículo"
+    },
+    "attack": {
+      "none": "",
+      "guns": "Pistolas",
+      "martialArts": "Artes Marciales",
+      "sorcery": "Hechicería",
+      "creature": "Criatura",
+      "scroungetech": "Scroungetech",
+      "mutant": "Mutante"
+    },
+    "chat": {
+      "attack": {
+        "title": "Ataca ({weapon})",
+        "blocked": "Ataque bloqueado por {blocker}.",
+        "attackNotification": "{attacker} is attacking {target}. You can spend 1 shot to attempt to dodge.",
+        "hitNotification": "{attacker} just hit you. You can spend 1 shot to attempt to dodge.",
+        "dodge": "{target} attempts to dodge {attacker} and gets a {value} modifier to Defense.",
+        "dodgeSuccess": "{target} dodged {attacker}'s attack.",
+        "dodgeFailed":"{target} failed to dodge {attacker}'s attack.",
+        "summary": {
+          "title": "Resumen ataque",
+          "smackdown": "Smackdown for {name}: {value}.",
+          "downedCharacter": "{name} is down after taking {damage} damage.",
+          "damaged": "{name} has taken {damage} damage.",
+          "downed": "¿Derribado?"
+        }
+      },
+      "interrupt": {
+        "base":"{actor} interrupts!",
+        "cost": "Shots spent: {shots}.",
+        "nextAction": "Next action on shot {initiative}.",
+        "nextSequence": "No more actions this sequence."
+      },
+      "actions": {
+        "attack": "Ataque",
+        "conceal": "Oculta",
+        "reload": "Recarga",
+        "defend": "Defensa",
+        "dodge": "Esquiva",
+        "upcheck": "Up Check",
+        "roll": "Tirar",
+        "cancel": "Cancelar",
+        "resolveAttack": "Resolver Ataque",
+        "applySmackdown": "Take Smackdown",
+        "applySmackdownThunk": "Take Smackdown (use armor)",
+        "applyDamage": "Aplicar Daño"
+      },
+      "taskCheck": {
+        "title": "{type} check",
+        "difficulty": "(difficulty {diff})",
+        "swerve": "Swerve: {swerve}",
+        "actionResult": "Action Result: {result}",
+        "outcome": "Outcome: {outcome}",
+        "types": {
+          "guns": "Pistolas",
+          "martialArts": "Artes Marciales",
+          "sorcery": "Hechicería",
+          "creature": "Criatura",
+          "scroungetech": "Scroungetech",
+          "mutant": "Mutante",
+          "fortune": "Fortuna",
+          "death": "Muerte",
+          "defense": "Defensa",
+          "toughness": "Dureza",
+          "speed": "Velocidad",
+          "up": "Up",
+          "reload": "Recarga"
+        },
+        "options": {
+          "modifier": "Modifier: ",
+          "closedRoll": "Closed Roll? ",
+          "useFortune": "Use a Fortune Point? ",
+          "difficulty": "Difficulty: "
+        }
+      }
+    },
+    "combat": {
+      "missingInitiative": "{token} has not rolled initiative."
+    },
+    "weapon": {
+      "attackWith": "Attack with:",
+      "damage": "Damage",
+      "conceal": "Conceal",
+      "reload": "Reload",
+      "mookBonus": "Bonus vs Mooks",
+      "pumpAction": "Pump Action?",
+      "heavy": "Anti Vehicle"
+    },
+    "armor": {
+      "thunk": "Thunk",
+      "popBack": "Pop-Back",
+      "penalty": "Initiative Penalty"
+    },
+    "vehicle": {
+      "acceleration": "Acceleration",
+      "frame": "Frame",
+      "handling": "Handling",
+      "squeal": "Squeal",
+      "crunch": "Crunch",
+      "personal": "Personal",
+      "driving": "Driving Skill",
+      "military": "Military Vehicle",
+      "condition": "Condition",
+      "driver": "Driver",
+      "passengers": "Passengers",
+      "chasePoints": "Chase Points",
+      "passengerPicker": "Pick Passengers",
+      "addPassengers": "Add"
+    },
+    "shtick": {
+      "types": {
+        "core": "Core",
+        "supernatural": "Supernatural Creature",
+        "gun": "Gun",
+        "animal": "Transformed Animal",
+        "fu": "Fu",
+        "gene": "Gene",
+        "driving": "Driving",
+        "scroungetech": "Scroungetech",
+        "sorcery": "Sorcery",
+        "disadvantage": "Disadvantage"
+      },
+      "label": "{type} Shtick",
+      "type": "Shtick Type",
+      "fortuneCost": "Fortune Cost",
+      "shotCost": "Shot Cost"
+    },
+    "wealth": {
+      "label": "Wealth",
+      "poor": "Poor",
+      "stiff": "Working Stiff",
+      "rich": "Rich"
+    },
+    "stats": {
+      "attack": "Attack",
+      "backupAttack": "Backup Attack",
+      "defense": "Defense",
+      "toughness": "Toughness",
+      "speed": "Speed",
+      "fortune": "Fortune",
+      "chi": "Chi",
+      "genome": "Genome",
+      "magic": "Magic"
+    },
+    "skills": {
+      "unskilled": "Unskilled"
+    },
+    "sheet": {
+      "woundPoints": "Wound Points",
+      "chasePoints": "Chase Points",
+      "characterName": "Character Name",
+      "vehicleName": "Vehicle Name",
+      "vehicleCharacteristics": "vehicle Characteristics",
+      "concept": "Character Concept",
+      "hook": "Melodramatic Hook",
+      "gear": "Additional Gear",
+      "description": "Description",
+      "effects": "Effects",
+      "skills": "Skills",
+      "unskilledCheck": "Unskilled checks use a rating of 7",
+      "deathMarks": "Marks of Death",
+      "edit": "Edit",
+      "delete": "Delete",
+      "newItem": "New Item",
+      "addSkill": "Add Skill",
+      "skillName": "Skill Name",
+      "setImpairmentThreshold": "Set Impairment Threshold",
+      "impairment": "Impairment"
+    },
+    "checkSuccess": "Success",
+    "checkFailure": "Failed",
+    "deathCheck": {
+      "success": "PHEW!",
+      "failure": "DED!"
+    },
+    "reloadCheck": {
+      "success": "Keep shooting!",
+      "failure": "Out of ammo!"
+    },
+    "upCheck": {
+      "success": "{name} is still in the fight.",
+      "failure": "{name} has keeled over."
+    },
+    "errors": {
+      "vehiclePassenger": "Yo dawg, I heard you like vehicles, but you can't put a vehicle inside a vehicle.",
+      "compendiumPassenger": "Only imported actors can be vehicle passengers."
+    }
+  },
+  "COMBAT": {
+    "CombatantShotCost": "Shots to be spent",
+    "Round": "Sequence"
+  },
+  "SETTINGS": {
+    "showTaskCheckOptions": {
+      "name": "Ask for Task Check options by default.",
+      "label": "Hold Shift to Toggle."
+    },
+    "allowRetroactiveDodge": {
+      "name": "Allow retroactive dodge.",
+      "label": "Targets are offered the chance to try dodging after being hit, if they didn't declare it during the attack."
+    },
+    "automateFortuneSpending": {
+      "name": "Automate Fortune spending",
+      "label": "If enabled, using Fortune Die in checks will automatically remove them from the pool."
+    }
+  }
+}
