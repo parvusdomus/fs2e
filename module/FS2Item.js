@@ -19,7 +19,7 @@ export default class FS2Item extends Item {
     //console.log ("THIS SYSTEM")
     //console.log (...this.system)
     let cardData = {
-      ...this.system,
+      ...this,
       uuid: this.uuid,
       ownerID: this.actor.uuid,
       config: CONFIG.fs2e

@@ -18,6 +18,7 @@ async function preloadHandlebarsTemplates() {
     "systems/fs2e/templates/partials/character-stat-block.hbs",
     "systems/fs2e/templates/partials/vehicle-stat-block.hbs",
     "systems/fs2e/templates/partials/weapon-card.hbs",
+    "systems/fs2e/templates/partials/weapon-card-chat.hbs",
     "systems/fs2e/templates/partials/wound-points.hbs",
     "systems/fs2e/templates/partials/shtick-card.hbs",
     "systems/fs2e/templates/partials/armor-card.hbs",

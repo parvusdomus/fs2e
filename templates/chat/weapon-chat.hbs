@@ -1,14 +1,8 @@
 <div class="fs2e chat-card weapon" data-actor-id="{{ownerID}}" data-item-id="{{uuid}}">
-  {{> "systems/fs2e/templates/partials/weapon-card.hbs"}}
-
-  {{#if data.description}}
-  <div class="card-content">
-    <p>{{data.description}}</p>
-  </div>
-  {{/if}}
+  {{> "systems/fs2e/templates/partials/weapon-card-chat.hbs"}}
 
   <button class="attack" data-action="Attack">{{localize "fs2e.chat.actions.attack"}}</button>
-  {{#if data.reload}}
+  {{#if system.reload}}
   <button class="reload" data-action="Reload">{{localize "fs2e.chat.actions.reload"}}</button>
   {{/if}}
 </div>
