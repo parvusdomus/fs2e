@@ -102,7 +102,7 @@ async function onApplySmackdown(event) {
 
   ChatMessage.create({
     user: game.user._id,
-    speaker: game.user,
+    speaker: game.user.name,
     content: await renderTemplate(template, templateData),
     whisper: game.users.filter(user => actor.testUserPermission(user, "OWNER"))
   });
@@ -125,24 +125,19 @@ async function onApplyDamage(event) {
 async function ResolveAttack(attacker, weapon, roll) {
   const weaponDamage = weapon.system.damage;
   let defenders = Array.from(game.users.current.targets).map(target => target.actor);;
-
   defenders.sort((a, b) => {
     return b.getEffectiveDefense() - a.getEffectiveDefense();
   });
-
   const topDefender = defenders[0];
   const topDefenderIsMook = topDefender.type == "mook";
   const mookBonus = weapon.system.mookBonus;
-
   const attack = topDefenderIsMook ? roll + mookBonus : roll;
-
   let defense = topDefender.getEffectiveDefense();
   let outcome = attack - defense;
-
   if (outcome < 0) {
     ChatMessage.create({
       user: game.user.id,
-      speaker: game.user,
+      speaker: game.user.name,
       content: await renderTemplate("systems/fs2e/templates/chat/attack-fail.hbs", {
         blocker: topDefender
       })
@@ -193,7 +188,7 @@ export async function SendDamageMessage(attacker, defender, outcome, smackdown, 
 
   ChatMessage.create({
     user: game.user._id,
-    speaker: game.user,
+    speaker: game.user.name,
     content: await renderTemplate(template, templateData),
     whisper: game.users.filter(user => defender.testUserPermission(user, "OWNER"))
   });
