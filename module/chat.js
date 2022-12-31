@@ -238,10 +238,9 @@ export const highlightTaskCheckResults = function (message, html, data) {
     return;
   }
 
-  const roll = message.roll;
-
-  const plusDice = roll.dice[0].results[0];
-  const minusDice = roll.dice[1].results[0];
+  const roll = message.rolls;
+  const plusDice = roll[0].dice[0].results[0];
+  const minusDice = roll[0].dice[1].results[0];
   let boxcars = plusDice.exploded && minusDice.exploded;
 
   if (boxcars) {
