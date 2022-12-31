@@ -20,24 +20,24 @@
       "attack": {
         "title": "Ataca ({weapon})",
         "blocked": "Ataque bloqueado por {blocker}.",
-        "attackNotification": "{attacker} is attacking {target}. You can spend 1 shot to attempt to dodge.",
-        "hitNotification": "{attacker} just hit you. You can spend 1 shot to attempt to dodge.",
-        "dodge": "{target} attempts to dodge {attacker} and gets a {value} modifier to Defense.",
-        "dodgeSuccess": "{target} dodged {attacker}'s attack.",
-        "dodgeFailed":"{target} failed to dodge {attacker}'s attack.",
+        "attackNotification": "{attacker} va a atacar a {target}. Puedes gastar 1 shot para intentar esquivar.",
+        "hitNotification": "{attacker} acaba de impactarte. Puedes usar 1 shot para intentar esquivar.",
+        "dodge": "{target} intenta esquivar a {attacker} y obtiene un bonificador de {value} a su Defensa.",
+        "dodgeSuccess": "{target} ha esquivado el ataque de {attacker}.",
+        "dodgeFailed":"{target} no ha logrado esquivar el ataque de {attacker}.",
         "summary": {
           "title": "Resumen ataque",
           "smackdown": "Smackdown for {name}: {value}.",
-          "downedCharacter": "{name} is down after taking {damage} damage.",
-          "damaged": "{name} has taken {damage} damage.",
+          "downedCharacter": "{name} ha caído tras recibir {damage} de daño.",
+          "damaged": "{name} ha recibido {damage} de daño.",
           "downed": "¿Derribado?"
         }
       },
       "interrupt": {
-        "base":"{actor} interrupts!",
-        "cost": "Shots spent: {shots}.",
-        "nextAction": "Next action on shot {initiative}.",
-        "nextSequence": "No more actions this sequence."
+        "base":"¡{actor} interrumpe!",
+        "cost": "Shots gastados: {shots}.",
+        "nextAction": "Próxima acción en shot {initiative}.",
+        "nextSequence": "No hay más acciones en esta secuencia."
       },
       "actions": {
         "attack": "Ataque",
@@ -75,29 +75,29 @@
           "reload": "Recarga"
         },
         "options": {
-          "modifier": "Modifier: ",
-          "closedRoll": "Closed Roll? ",
-          "useFortune": "Use a Fortune Point? ",
-          "difficulty": "Difficulty: "
+          "modifier": "Modificador: ",
+          "closedRoll": "¿Tirada cerrada? ",
+          "useFortune": "¿Usar un punto de Fortuna? ",
+          "difficulty": "Dificultad: "
         }
       }
     },
     "combat": {
-      "missingInitiative": "{token} has not rolled initiative."
+      "missingInitiative": "{token} no ha tirado iniciativa."
     },
     "weapon": {
-      "attackWith": "Attack with:",
-      "damage": "Damage",
-      "conceal": "Conceal",
-      "reload": "Reload",
+      "attackWith": "Ataque con:",
+      "damage": "Daño",
+      "conceal": "Ocultar",
+      "reload": "Recarga",
       "mookBonus": "Bonus vs Mooks",
       "pumpAction": "Pump Action?",
-      "heavy": "Anti Vehicle"
+      "heavy": "Anti vehículo"
     },
     "armor": {
       "thunk": "Thunk",
       "popBack": "Pop-Back",
-      "penalty": "Initiative Penalty"
+      "penalty": "Penalización a la iniciativa"
     },
     "vehicle": {
       "acceleration": "Acceleration",
@@ -128,10 +128,10 @@
         "sorcery": "Sorcery",
         "disadvantage": "Disadvantage"
       },
-      "label": "{type} Shtick",
-      "type": "Shtick Type",
-      "fortuneCost": "Fortune Cost",
-      "shotCost": "Shot Cost"
+      "label": "Virguería de {type}",
+      "type": "Tipo de virguería",
+      "fortuneCost": "Coste en Fortuna",
+      "shotCost": "Coste en shots"
     },
     "wealth": {
       "label": "Wealth",
@@ -140,15 +140,15 @@
       "rich": "Rich"
     },
     "stats": {
-      "attack": "Attack",
-      "backupAttack": "Backup Attack",
-      "defense": "Defense",
-      "toughness": "Toughness",
-      "speed": "Speed",
-      "fortune": "Fortune",
+      "attack": "Ataque",
+      "backupAttack": "Ataque secundario",
+      "defense": "Defensa",
+      "toughness": "Dureza",
+      "speed": "Velocidad",
+      "fortune": "Fortuna",
       "chi": "Chi",
-      "genome": "Genome",
-      "magic": "Magic"
+      "genome": "Genoma",
+      "magic": "Magia"
     },
     "skills": {
       "unskilled": "Unskilled"
@@ -175,19 +175,19 @@
       "setImpairmentThreshold": "Set Impairment Threshold",
       "impairment": "Impairment"
     },
-    "checkSuccess": "Success",
-    "checkFailure": "Failed",
+    "checkSuccess": "Éxito",
+    "checkFailure": "Fallo",
     "deathCheck": {
-      "success": "PHEW!",
-      "failure": "DED!"
+      "success": "¡FIUUU!",
+      "failure": "¡PUAJ!"
     },
     "reloadCheck": {
-      "success": "Keep shooting!",
-      "failure": "Out of ammo!"
+      "success": "¡Sigue disparando!",
+      "failure": "¡Se acabaron las balas!"
     },
     "upCheck": {
-      "success": "{name} is still in the fight.",
-      "failure": "{name} has keeled over."
+      "success": "{name} sigue luchando.",
+      "failure": "{name} ha hincado la rodilla."
     },
     "errors": {
       "vehiclePassenger": "Yo dawg, I heard you like vehicles, but you can't put a vehicle inside a vehicle.",
@@ -195,8 +195,8 @@
     }
   },
   "COMBAT": {
-    "CombatantShotCost": "Shots to be spent",
-    "Round": "Sequence"
+    "CombatantShotCost": "Shots a gastar",
+    "Round": "Secuencia"
   },
   "SETTINGS": {
     "showTaskCheckOptions": {
@@ -204,12 +204,12 @@
       "label": "Hold Shift to Toggle."
     },
     "allowRetroactiveDodge": {
-      "name": "Allow retroactive dodge.",
-      "label": "Targets are offered the chance to try dodging after being hit, if they didn't declare it during the attack."
+      "name": "Permite defensa retroactiva.",
+      "label": "Los objetivos tienen la oportunidad de intentar esquivar después de recibir el impacto si no lo han declarado durante el ataque."
     },
     "automateFortuneSpending": {
-      "name": "Automate Fortune spending",
-      "label": "If enabled, using Fortune Die in checks will automatically remove them from the pool."
+      "name": "Gasto automático de Fortuna",
+      "label": "Si está activado, usar un dado de Fortuna en las tiradas eliminará automáticamente la Fortuna de la reserva."
     }
   }
 }
