@@ -2,7 +2,7 @@
   "id":"fs2e",
   "title": "Feng Shui 2: The action movie roleplaying game",
   "description": "A system for playing Feng Shui 2 games.",
-  "version": "0.24",
+  "version": "0.30",
   "authors": [
     {
       "name": "Mougli, ParvusDomus, ForjaSalvaje",
@@ -48,5 +48,5 @@
   "initiative": "1d6 + @speed",
   "url": "https://github.com/parvusdomus/fs2e",
   "manifest": "https://raw.githubusercontent.com/parvusdomus/fs2e/master/system.json",
-  "download": "https://github.com/parvusdomus/fs2e/releases/release-0.23/downloads/fs2e-release-0.23.zip"
+  "download": "https://github.com/parvusdomus/fs2e/releases/release-0.30/downloads/fs2e-release.zip"
 }
