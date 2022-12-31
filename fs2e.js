@@ -169,7 +169,14 @@ Hooks.once("init", function () {
   CONFIG.ActiveEffect.documentClass = FS2ActiveEffect;
 
   CONFIG.canvasTextStyle.fontFamily = "Baron Neue";
-  CONFIG.fontFamilies.push("Baron Neue", "Gotham Book");
+  CONFIG.fontDefinitions["Baron Neue"] = {
+    editor: true,
+    fonts: []
+  };
+  CONFIG.fontDefinitions["Gotham Book"] = {
+    editor: true,
+    fonts: []
+  };
   CONFIG.defaultFontFamily = "Baron Neue";
 
   CONFIG.TinyMCE.content_css.push("systems/fs2e/fs2e-mce.css");
