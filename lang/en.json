@@ -34,7 +34,7 @@
         }
       },
       "interrupt": {
-        "base":"{actor} interrupts!",
+        "base":"{name} interrupts!",
         "cost": "Shots spent: {shots}.",
         "nextAction": "Next action on shot {initiative}.",
         "nextSequence": "No more actions this sequence."
@@ -76,6 +76,7 @@
         },
         "options": {
           "modifier": "Modifier: ",
+          "modifier_dodge": "Additional Modifier to Dodge: ",
           "closedRoll": "Closed Roll? ",
           "useFortune": "Use a Fortune Point? ",
           "difficulty": "Difficulty: "

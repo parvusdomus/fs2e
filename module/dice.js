@@ -234,7 +234,7 @@ export async function Dodge(attacker, defender, askForOptions, retroactive = fal
   if (askForOptions != optionsSettings) {
     let rollOptions = await GetRollOptions({
       hasFortune,
-      template: "systems/fs2e/templates/chat/roll-options-dialog.hbs"
+      template: "systems/fs2e/templates/chat/roll-options-dialog-dodge.hbs"
     });
 
     if (rollOptions.cancelled) {

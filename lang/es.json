@@ -76,6 +76,7 @@
         },
         "options": {
           "modifier": "Modificador: ",
+          "modifierDodge": "Modificador Adicional a la Esquiva: ",
           "closedRoll": "¿Tirada cerrada? ",
           "useFortune": "¿Usar un punto de Fortuna? ",
           "difficulty": "Dificultad: "

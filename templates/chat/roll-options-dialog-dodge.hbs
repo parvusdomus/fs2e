@@ -1,0 +1,15 @@
+<form>
+  <div class="form-group">
+    <label>{{localize "fs2e.chat.taskCheck.options.modifierDodge"}}</label>
+    <input type="text" name="modifier" value="{{modifier}}" />
+  </div>
+  {{#if hasFortune}}
+  <div class="form-group">
+    <label>{{localize "fs2e.chat.taskCheck.options.useFortune"}}</label>
+    <input type="checkbox" name="useFortune" {{#if useFortune}} checked {{/if}} />
+  </div>
+  {{/if}}
+  <div class="form-group">
+    <label>PULSA TIRAR PARA APLICAR LA ESQUIVA</label>
+  </div>
+</form>

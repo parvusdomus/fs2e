@@ -70,7 +70,7 @@ export default class FS2Combat extends Combat {
     const messageTemplate = "systems/fs2e/templates/chat/interrupt.hbs"
     const spendResult = await this.spendShots(combatant, cost);
     const templateData = {
-      actor: combatant.actor.system,
+      actor: combatant.actor.name,
       cost: spendResult.shotsSpent,
       initiative: spendResult.newInitiative,
       shotsLeft: spendResult.newInitiative > 0
