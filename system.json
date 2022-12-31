@@ -47,6 +47,6 @@
   "primaryTokenAttribute": "wounds",
   "initiative": "1d6 + @speed",
   "url": "https://github.com/parvusdomus/fs2e",
-  "manifest": "https://raw.githubusercontent.com/parvusdomus/fs2e/master/system.json",
+  "manifest": "https://github.com/parvusdomus/fs2e/blob/master/system.json",
   "download": "https://github.com/parvusdomus/fs2e/releases/download/v0.30/fs2e-release.zip"
 }
