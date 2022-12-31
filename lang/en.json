@@ -34,7 +34,7 @@
         }
       },
       "interrupt": {
-        "base":"{name} interrupts!",
+        "base":"{actor} interrupts!",
         "cost": "Shots spent: {shots}.",
         "nextAction": "Next action on shot {initiative}.",
         "nextSequence": "No more actions this sequence."
