@@ -1,33 +1,33 @@
 {
   "fs2e": {
     "actor": {
-      "hero": "Heroe",
-      "mook": "Masilla",
+      "hero": "Héroe",
+      "mook": "Esbirro",
       "featuredFoe": "Secuaz",
       "boss": "Jefe",
       "vehicle": "Vehículo"
     },
     "attack": {
       "none": "",
-      "guns": "Pistolas",
+      "guns": "Armas",
       "martialArts": "Artes Marciales",
       "sorcery": "Hechicería",
       "creature": "Criatura",
-      "scroungetech": "Scroungetech",
+      "scroungetech": "Tecnochatarra",
       "mutant": "Mutante"
     },
     "chat": {
       "attack": {
-        "title": "Ataca ({weapon})",
+        "title": "Ataque con ({weapon})",
         "blocked": "Ataque bloqueado por {blocker}.",
-        "attackNotification": "{attacker} va a atacar a {target}. Puedes gastar 1 shot para intentar esquivar.",
-        "hitNotification": "{attacker} acaba de impactarte. Puedes usar 1 shot para intentar esquivar.",
+        "attackNotification": "{attacker} va a atacar a {target}. Puedes gastar 1 toma para intentar esquivar.",
+        "hitNotification": "{attacker} acaba de impactarte. Puedes usar 1 toma para intentar esquivar.",
         "dodge": "{target} intenta esquivar a {attacker} y obtiene un bonificador de {value} a su Defensa.",
         "dodgeSuccess": "{target} ha esquivado el ataque de {attacker}.",
         "dodgeFailed":"{target} no ha logrado esquivar el ataque de {attacker}.",
         "summary": {
-          "title": "Resumen ataque",
-          "smackdown": "Smackdown for {name}: {value}.",
+          "title": "Resumen del ataque",
+          "smackdown": "Tunda para {name}: {value}.",
           "downedCharacter": "{name} ha caído tras recibir {damage} de daño.",
           "damaged": "{name} ha recibido {damage} de daño.",
           "downed": "¿Derribado?"
@@ -35,8 +35,8 @@
       },
       "interrupt": {
         "base":"¡{actor} interrumpe!",
-        "cost": "Shots gastados: {shots}.",
-        "nextAction": "Próxima acción en shot {initiative}.",
+        "cost": "Tomas gastadas: {shots}.",
+        "nextAction": "Próxima acción en toma {initiative}.",
         "nextSequence": "No hay más acciones en esta secuencia."
       },
       "actions": {
@@ -49,29 +49,29 @@
         "roll": "Tirar",
         "cancel": "Cancelar",
         "resolveAttack": "Resolver Ataque",
-        "applySmackdown": "Take Smackdown",
-        "applySmackdownThunk": "Take Smackdown (use armor)",
-        "applyDamage": "Aplicar Daño"
+        "applySmackdown": "Aplicar tunda",
+        "applySmackdownThunk": "Recibe tunda (usa armadura)",
+        "applyDamage": "Aplicar daño"
       },
       "taskCheck": {
-        "title": "{type} check",
+        "title": "Chequeo de {type}",
         "difficulty": "(difficulty {diff})",
-        "swerve": "Swerve: {swerve}",
-        "actionResult": "Action Result: {result}",
-        "outcome": "Outcome: {outcome}",
+        "swerve": "Derrape: {swerve}",
+        "actionResult": "Resultado de la acción: {result}",
+        "outcome": "Resultado: {outcome}",
         "types": {
           "guns": "Pistolas",
           "martialArts": "Artes Marciales",
           "sorcery": "Hechicería",
           "creature": "Criatura",
-          "scroungetech": "Scroungetech",
+          "scroungetech": "Tecnochatarra",
           "mutant": "Mutante",
           "fortune": "Fortuna",
           "death": "Muerte",
           "defense": "Defensa",
           "toughness": "Dureza",
           "speed": "Velocidad",
-          "up": "Up",
+          "up": "Aguante",
           "reload": "Recarga"
         },
         "options": {
@@ -91,54 +91,54 @@
       "damage": "Daño",
       "conceal": "Ocultar",
       "reload": "Recarga",
-      "mookBonus": "Bonus vs Mooks",
-      "pumpAction": "Pump Action?",
+      "mookBonus": "Bono contra esbirros",
+      "pumpAction": "¿Corredera?",
       "heavy": "Anti vehículo"
     },
     "armor": {
       "thunk": "Thunk",
-      "popBack": "Pop-Back",
+      "popBack": "Amortiguación",
       "penalty": "Penalización a la iniciativa"
     },
     "vehicle": {
-      "acceleration": "Acceleration",
-      "frame": "Frame",
-      "handling": "Handling",
-      "squeal": "Squeal",
-      "crunch": "Crunch",
+      "acceleration": "Aceleración",
+      "frame": "Chasis",
+      "handling": "Manejo",
+      "squeal": "Chirrido",
+      "crunch": "Aplastamiento",
       "personal": "Personal",
-      "driving": "Driving Skill",
-      "military": "Military Vehicle",
-      "condition": "Condition",
-      "driver": "Driver",
-      "passengers": "Passengers",
-      "chasePoints": "Chase Points",
-      "passengerPicker": "Pick Passengers",
-      "addPassengers": "Add"
+      "driving": "Habilidad de Conducir",
+      "military": "Vehículo militar",
+      "condition": "Estado",
+      "driver": "Conductor",
+      "passengers": "Pasajeros",
+      "chasePoints": "Puntos de persecución",
+      "passengerPicker": "Elige pasajeros",
+      "addPassengers": "Añadir"
     },
     "shtick": {
       "types": {
         "core": "Core",
-        "supernatural": "Supernatural Creature",
-        "gun": "Gun",
-        "animal": "Transformed Animal",
+        "supernatural": "Criatura Sobrenatural",
+        "gun": "Armas",
+        "animal": "Animal Transformado",
         "fu": "Fu",
         "gene": "Gene",
-        "driving": "Driving",
-        "scroungetech": "Scroungetech",
-        "sorcery": "Sorcery",
-        "disadvantage": "Disadvantage"
+        "driving": "Conducción",
+        "scroungetech": "Tecnochatarra",
+        "sorcery": "Hechicería",
+        "disadvantage": "Desventaja"
       },
       "label": "Virguería de {type}",
       "type": "Tipo de virguería",
       "fortuneCost": "Coste en Fortuna",
-      "shotCost": "Coste en shots"
+      "shotCost": "Coste en tomas"
     },
     "wealth": {
-      "label": "Wealth",
-      "poor": "Poor",
-      "stiff": "Working Stiff",
-      "rich": "Rich"
+      "label": "Riqueza",
+      "poor": "Pobre",
+      "stiff": "Trabajador",
+      "rich": "Rico"
     },
     "stats": {
       "attack": "Ataque",
@@ -152,29 +152,29 @@
       "magic": "Magia"
     },
     "skills": {
-      "unskilled": "Unskilled"
+      "unskilled": "Sin habilidad"
     },
     "sheet": {
-      "woundPoints": "Wound Points",
-      "chasePoints": "Chase Points",
-      "characterName": "Character Name",
-      "vehicleName": "Vehicle Name",
-      "vehicleCharacteristics": "vehicle Characteristics",
-      "concept": "Character Concept",
-      "hook": "Melodramatic Hook",
-      "gear": "Additional Gear",
-      "description": "Description",
-      "effects": "Effects",
-      "skills": "Skills",
-      "unskilledCheck": "Unskilled checks use a rating of 7",
-      "deathMarks": "Marks of Death",
-      "edit": "Edit",
-      "delete": "Delete",
-      "newItem": "New Item",
-      "addSkill": "Add Skill",
-      "skillName": "Skill Name",
-      "setImpairmentThreshold": "Set Impairment Threshold",
-      "impairment": "Impairment"
+      "woundPoints": "Puntos de heridas",
+      "chasePoints": "Puntos de persecución",
+      "characterName": "Nombre del personaje",
+      "vehicleName": "Nombre del vehículo",
+      "vehicleCharacteristics": "Características del vehículo",
+      "concept": "Concepto de personaje",
+      "hook": "Gancho melodramático",
+      "gear": "Equipo adicional",
+      "description": "Descripción",
+      "effects": "Efectos",
+      "skills": "Habilidades",
+      "unskilledCheck": "Las tiradas sin entrenar usan una puntuación de 7",
+      "deathMarks": "Marcas de muerte",
+      "edit": "Editar",
+      "delete": "Borrar",
+      "newItem": "Nuevo objeto",
+      "addSkill": "Añadir habilidad",
+      "skillName": "Nombre de habilidad",
+      "setImpairmentThreshold": "Establecer umbral de Incapacitación",
+      "impairment": "Incapacitación"
     },
     "checkSuccess": "Éxito",
     "checkFailure": "Fallo",
@@ -191,18 +191,18 @@
       "failure": "{name} ha hincado la rodilla."
     },
     "errors": {
-      "vehiclePassenger": "Yo dawg, I heard you like vehicles, but you can't put a vehicle inside a vehicle.",
-      "compendiumPassenger": "Only imported actors can be vehicle passengers."
+      "vehiclePassenger": "Eh perro, me han dicho que te gustan los vehículos, pero no puedes meter un vehículo dentro de otro vehículo.",
+      "compendiumPassenger": "Solo los actores importados pueden ser pasajeros de vehículos."
     }
   },
   "COMBAT": {
-    "CombatantShotCost": "Shots a gastar",
+    "CombatantShotCost": "Tomas a gastar",
     "Round": "Secuencia"
   },
   "SETTINGS": {
     "showTaskCheckOptions": {
-      "name": "Ask for Task Check options by default.",
-      "label": "Hold Shift to Toggle."
+      "name": "Pedir opciones para tiradas por defecto.",
+      "label": "Mantén pulsado Mayúsculas para cambiar."
     },
     "allowRetroactiveDodge": {
       "name": "Permite defensa retroactiva.",
